@@ -11,7 +11,7 @@ function AboutUs() {
                 <a href="#">
                   <img
                     class="img-full"
-                    src="../../assets/css/images/about_us.webp"
+                    src="../../images/about_us.webp"
                     alt="Kenne's About Us Image"
                   />
                 </a>
@@ -20,7 +20,7 @@ function AboutUs() {
             <div class="col-lg-6 col-md-7 d-flex align-items-center">
               <div class="overview-content">
                 <h2>
-                  Welcome To <span>Kenne's</span> Store!
+                  Welcome To <span>The fantom's</span> Store!
                 </h2>
                 <p class="short_desc">
                   We Provide Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -106,10 +106,7 @@ function AboutUs() {
               <div class="team-member">
                 <div class="team-thumb img-hover_effect">
                   <a href="#">
-                    <img
-                      src="../../assets/css/images/team-1.webp"
-                      alt="Our Team Member"
-                    />
+                    <img src="../../images/team-1.webp" alt="Our Team Member" />
                   </a>
                 </div>
                 <div class="team-content text-center">
@@ -172,10 +169,7 @@ function AboutUs() {
               <div class="team-member">
                 <div class="team-thumb img-hover_effect">
                   <a href="#">
-                    <img
-                      src="../../assets/css/images/team-2.webp"
-                      alt="Our Team Member"
-                    />
+                    <img src="../../images/team-2.webp" alt="Our Team Member" />
                   </a>
                 </div>
                 <div class="team-content text-center">
@@ -238,10 +232,7 @@ function AboutUs() {
               <div class="team-member">
                 <div class="team-thumb img-hover_effect">
                   <a href="#">
-                    <img
-                      src="../../assets/css/images/team-1.webp"
-                      alt="Our Team Member"
-                    />
+                    <img src="../../images/team-1.webp" alt="Our Team Member" />
                   </a>
                 </div>
                 <div class="team-content text-center">
@@ -304,10 +295,7 @@ function AboutUs() {
               <div class="team-member">
                 <div class="team-thumb img-hover_effect">
                   <a href="#">
-                    <img
-                      src="../../assets/css/images/team-2.webp"
-                      alt="Our Team Member"
-                    />
+                    <img src="../../images/team-2.webp" alt="Our Team Member" />
                   </a>
                 </div>
                 <div class="team-content text-center">

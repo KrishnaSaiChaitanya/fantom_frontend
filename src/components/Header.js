@@ -119,83 +119,86 @@ function Header() {
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <div class="header-middle_nav">
-                <div class="header-logo_area">
+              <div class="header-middle_nav row">
+                <div className="col-4"></div>
+                <div class="header-logo_area col-4 d-flex justify-content-center">
                   <a href="index.html">
                     <img
                       alt="logo"
-                      src="../assets/css/images/logo.png"
-                      style={{ maxWidth: "250px" }}
+                      src="../images/logo.png"
+                      style={{ maxWidth: "280px" }}
                     />
                   </a>
                 </div>
-                <div class="header-search_area d-none d-lg-block">
+                {/* <div class="header-search_area d-none d-lg-block">
                   <form class="search-form" action="#">
                     <input type="text" placeholder="Search" />
                     <button class="search-button">
                       <i class="ion-ios-search"></i>
                     </button>
                   </form>
-                </div>
-                <div class="header-right_area d-none d-lg-block">
-                  <ul>
-                    <li class="minicart-wrap">
-                      <a
-                        class="minicart-btn toolbar-btn"
-                        onClick={() => setis_mini_cart(!is_mini_cart)}
-                      >
-                        <div
-                          class="minicart-count_area"
-                          data-bs-toggle="offcanvas"
-                          data-bs-target="#offcanvas"
-                          role="button"
+                </div> */}
+                <div className="col-4 justify-content-end d-flex">
+                  <div class="header-right_area d-none d-lg-block">
+                    <ul>
+                      <li class="minicart-wrap">
+                        <a
+                          class="minicart-btn toolbar-btn"
+                          onClick={() => setis_mini_cart(!is_mini_cart)}
                         >
-                          <span class="item-count">03</span>
-                          <i class="ion-bag"></i>
-                        </div>
-                        <div class="minicart-front_text">
-                          <span>Cart:</span>
-                          <span class="total-price">462.4</span>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="header-right_area header-right_area-2 d-block d-lg-none">
-                  <ul>
-                    <li class="mobile-menu_wrap d-inline-block d-lg-none">
-                      <a
-                        href="#mobileMenu"
-                        class="mobile-menu_btn toolbar-btn color--white"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight"
-                        aria-controls="offcanvasRight"
-                      >
-                        <i class="ion-android-menu"></i>
-                      </a>
-                    </li>
-                    <li class="minicart-wrap">
-                      <a
-                        href="#miniCart"
-                        class="minicart-btn toolbar-btn"
-                        onClick={() => setis_mini_cart(!is_mini_cart)}
-                      >
-                        <div
-                          class="minicart-count_area"
+                          <div
+                            class="minicart-count_area"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvas"
+                            role="button"
+                          >
+                            <span class="item-count">03</span>
+                            <i class="ion-bag"></i>
+                          </div>
+                          <div class="minicart-front_text">
+                            <span>Cart:</span>
+                            <span class="total-price">462.4</span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="header-right_area header-right_area-2 d-block d-lg-none">
+                    <ul>
+                      <li class="mobile-menu_wrap d-inline-block d-lg-none">
+                        <a
+                          href="#mobileMenu"
+                          class="mobile-menu_btn toolbar-btn color--white"
                           data-bs-toggle="offcanvas"
-                          data-bs-target="#offcanvas"
+                          data-bs-target="#offcanvasRight"
+                          aria-controls="offcanvasRight"
                         >
-                          <span class="item-count">03</span>
-                          <i class="ion-bag"></i>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#searchBar" class="search-btn toolbar-btn">
-                        <i class="ion-android-search"></i>
-                      </a>
-                    </li>
-                  </ul>
+                          <i class="ion-android-menu"></i>
+                        </a>
+                      </li>
+                      <li class="minicart-wrap">
+                        <a
+                          href="#miniCart"
+                          class="minicart-btn toolbar-btn"
+                          onClick={() => setis_mini_cart(!is_mini_cart)}
+                        >
+                          <div
+                            class="minicart-count_area"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvas"
+                          >
+                            <span class="item-count">03</span>
+                            <i class="ion-bag"></i>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#searchBar" class="search-btn toolbar-btn">
+                          <i class="ion-android-search"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -413,7 +416,7 @@ function Header() {
                       <div class="header-logo_area">
                         <a href="index.html">
                           <img
-                            src="../assets/css/images/logo.png"
+                            src="../images/logo.png"
                             style={{ maxWidth: "200px" }}
                             alt="Header Logo"
                           />
@@ -706,7 +709,7 @@ function Header() {
               <div class="offcanvas-inner_logo">
                 <a href="index.html">
                   <img
-                    src="../assets/css/images/logo-1.png"
+                    src="../images/logo-1.png"
                     alt="Header Logo"
                     style={{ maxWidth: "200px" }}
                   />
@@ -980,6 +983,7 @@ function Header() {
       </div>
       {/* <div class="global-overlay"></div> */}
       {is_mini_cart && <div class="global-overlay overlay-open"></div>}
+      {/* Mini cart Imp ---------- */}
       <div
         style={{ width: "400px" }}
         class="offcanvas offcanvas-start"
@@ -1022,7 +1026,7 @@ function Header() {
                   <li class="minicart-product d-flex flex-row">
                     <div class="product-item_img">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product"
                         style={{ maxWidth: "120px" }}
                       />
@@ -1046,7 +1050,7 @@ function Header() {
                   <li class="minicart-product d-flex flex-row">
                     <div class="product-item_img">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product"
                         style={{ maxWidth: "120px" }}
                       />
@@ -1070,7 +1074,7 @@ function Header() {
                   <li class="minicart-product d-flex flex-row">
                     <div class="product-item_img">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Image"
                         style={{ maxWidth: "120px" }}
                       />
@@ -1098,12 +1102,12 @@ function Header() {
                 <span class="ammount">$462.4‬0</span>
               </div>
               <div class="minicart-btn_area p-1">
-                <a href="cart.html" class="kenne-btn kenne-btn_fullwidth">
+                <a href="/cart" class="kenne-btn kenne-btn_fullwidth">
                   Minicart
                 </a>
               </div>
               <div class="minicart-btn_area p-1">
-                <a href="checkout.html" class="kenne-btn kenne-btn_fullwidth">
+                <a href="/checkout" class="kenne-btn kenne-btn_fullwidth">
                   Checkout
                 </a>
               </div>

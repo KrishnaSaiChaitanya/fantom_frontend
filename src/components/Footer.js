@@ -11,7 +11,7 @@ function Footer() {
                 <div class="newsletter-logo">
                   <a href="/">
                     <img
-                      src="../assets/css/images/logo-1.png"
+                      src="../images/logo-1.png"
                       style={{ maxWidth: "300px" }}
                       alt="Logo"
                     />

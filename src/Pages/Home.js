@@ -3,7 +3,6 @@ import React from "react";
 function Home() {
   return (
     <div>
-      {" "}
       <div class="main-wrapper">
         <div class="banner-area-5">
           <div class="container">
@@ -21,7 +20,7 @@ function Home() {
                     <div class="kenne-btn-ps_center">
                       <a
                         class="kenne-btn transparent-btn black-color square-btn"
-                        href="shop-left-sidebar.html"
+                        href="/products"
                       >
                         Discover Now
                       </a>
@@ -73,10 +72,7 @@ function Home() {
                 <div class="banner-item img-hover_effect">
                   <div class="banner-img">
                     <a href="javascrip:void(0)">
-                      <img
-                        src="../assets/css/images/banner-1.webp"
-                        alt="Banner"
-                      />
+                      <img src="../images/banner-1.webp" alt="Banner" />
                     </a>
                   </div>
                 </div>
@@ -85,10 +81,7 @@ function Home() {
                 <div class="banner-item img-hover_effect">
                   <div class="banner-img">
                     <a href="javascrip:void(0)">
-                      <img
-                        src="../assets/css/images/bannner-2.webp"
-                        alt="Banner"
-                      />
+                      <img src="../images/bannner-2.webp" alt="Banner" />
                     </a>
                   </div>
                 </div>
@@ -97,10 +90,7 @@ function Home() {
                 <div class="banner-item img-hover_effect">
                   <div class="banner-img">
                     <a href="javascrip:void(0)">
-                      <img
-                        src="../assets/css/images/banner-1.webp"
-                        alt="Banner"
-                      />
+                      <img src="../images/banner-1.webp" alt="Banner" />
                     </a>
                   </div>
                 </div>
@@ -192,8 +182,8 @@ function Home() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹40</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -291,8 +281,8 @@ function Home() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹40</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -390,8 +380,8 @@ function Home() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹40</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -489,8 +479,8 @@ function Home() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹40</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -588,8 +578,8 @@ function Home() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹40</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -687,8 +677,8 @@ function Home() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹40</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -786,8 +776,8 @@ function Home() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹40</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -885,8 +875,8 @@ function Home() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹40</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -926,7 +916,7 @@ function Home() {
                     <a href="javascrip:void(0)">
                       <img
                         class="img-full"
-                        src="../assets/css/images/banner_area-1.webp"
+                        src="../images/banner_area-1.webp"
                         alt="Banner"
                       />
                     </a>
@@ -939,7 +929,7 @@ function Home() {
                     <a href="javascrip:void(0)">
                       <img
                         class="img-full"
-                        src="../assets/css/images/bannner_area-2.webp"
+                        src="../images/bannner_area-2.webp"
                         alt="Banner"
                       />
                     </a>

@@ -29,10 +29,10 @@ function ContactUs() {
               <div class="contact-page-side-content">
                 <h3 class="contact-page-title">Contact Us</h3>
                 <p class="contact-page-message">
-                  Claritas est etiam processus dynamicus, qui sequitur
-                  mutationem consuetudium lectorum. Mirum est notare quam
-                  littera gothica, quam nunc putamus parum claram anteposuerit
-                  litterarum formas human.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Velit ipsum maiores facere. Quam quasi ipsum quos debitis
+                  perferendis obcaecati fugit recusandae, ad, sequi quod
+                  doloribus dolores earum id corrupti maxime.
                 </p>
                 <div class="single-contact-block">
                   <h4>
@@ -44,15 +44,15 @@ function ContactUs() {
                   <h4>
                     <i class="fa fa-phone"></i> Phone
                   </h4>
-                  <p>Mobile: (08) 123 456 789</p>
+                  <p>Mobile: (00) 000 000 0000</p>
                   <p>Hotline: 1009 678 456</p>
                 </div>
                 <div class="single-contact-block last-child">
                   <h4>
                     <i class="fa fa-envelope-o"></i> Email
                   </h4>
-                  <p>yourmail@domain.com</p>
-                  <p>support@hastech.company</p>
+                  <p>email@domain.com</p>
+                  <p>support@.company</p>
                 </div>
               </div>
             </div>

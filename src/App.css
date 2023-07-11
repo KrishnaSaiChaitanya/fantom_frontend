@@ -5772,7 +5772,7 @@ i,
 
 /* ---Kenne's Banner Area Four--- */
 .kenne-banner_area-4 {
-  background-image: url("../public/assets/css/images/background_image.webp");
+  background-image: url("../public/images/background_image.webp");
   /* background-repeat: no-repeat; */
   /* background-position: center center; */
   /* background-size: cover; */
@@ -5875,7 +5875,7 @@ i,
 }
 
 .banner-area-5 .banner-item .banner-img {
-  background-image: url("../public/assets/css/images/background_image-1.webp");
+  background-image: url("../public/images/background_image-1.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -6630,7 +6630,7 @@ border: 2px solid white;
 /*  20 - Components - Breadcrumb
 /*----------------------------------------*/
 .breadcrumb-area {
-  background-image: url("../public/assets/css/images/bread_crums.webp");
+  background-image: url("../public/images/bread_crums.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

@@ -38,37 +38,37 @@ function Product() {
                   >
                     <div class="single-slide red zoom">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Image"
                       />
                     </div>
                     <div class="single-slide orange zoom">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Image"
                       />
                     </div>
                     <div class="single-slide brown zoom">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Image"
                       />
                     </div>
                     <div class="single-slide umber zoom">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Image"
                       />
                     </div>
                     <div class="single-slide black zoom">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Image"
                       />
                     </div>
                     <div class="single-slide green zoom">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Image"
                       />
                     </div>
@@ -77,38 +77,38 @@ function Product() {
                     <Slider className="p-3" {...settings}>
                       <div className="single-slide">
                         <img
-                          src="../assets/css/images/shirt-1.webp"
+                          src="../images/shirt-1.webp"
                           alt="Kenne's Product Image"
                           // style={{ maxWidth: "200px" }}
                         />
                       </div>
                       <div className="single-slide">
                         <img
-                          src="../assets/css/images/shirt-1.webp"
+                          src="../images/shirt-1.webp"
                           alt="Kenne's Product Image"
                         />
                       </div>
                       <div className="single-slide">
                         <img
-                          src="../assets/css/images/shirt-1.webp"
+                          src="../images/shirt-1.webp"
                           alt="Kenne's Product Image"
                         />
                       </div>
                       <div className="single-slide">
                         <img
-                          src="../assets/css/images/shirt-1.webp"
+                          src="../images/shirt-1.webp"
                           alt="Kenne's Product Image"
                         />
                       </div>
                       <div className="single-slide">
                         <img
-                          src="../assets/css/images/shirt-1.webp"
+                          src="../images/shirt-1.webp"
                           alt="Kenne's Product Image"
                         />
                       </div>
                       <div className="single-slide">
                         <img
-                          src="../assets/css/images/shirt-1.webp"
+                          src="../images/shirt-1.webp"
                           alt="Kenne's Product Image"
                         />
                       </div>
@@ -133,37 +133,37 @@ function Product() {
                   >
                     <div class="single-slide red">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Thumnail"
                       />
                     </div>
                     <div class="single-slide orange">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Thumnail"
                       />
                     </div>
                     <div class="single-slide brown">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Thumnail"
                       />
                     </div>
                     <div class="single-slide umber">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Thumnail"
                       />
                     </div>
                     <div class="single-slide red">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Thumnail"
                       />
                     </div>
                     <div class="single-slide orange">
                       <img
-                        src="../assets/css/images/shirt-1.webp"
+                        src="../images/shirt-1.webp"
                         alt="Kenne's Product Thumnail"
                       />
                     </div>
@@ -174,7 +174,7 @@ function Product() {
                 <div class="sp-content">
                   <div class="sp-heading">
                     <h5>
-                      <a href="#">Aliquid rerum ipsam maxime</a>
+                      <a href="#">Test Product</a>
                     </h5>
                   </div>
                   {/* <span class="reference">Reference: demo_1</span> */}
@@ -215,7 +215,7 @@ function Product() {
                       <li>
                         EX Tax:{" "}
                         <a href="javascript:void(0)">
-                          <span>$453.35</span>
+                          <span>₹453</span>
                         </a>
                       </li>
                       <li>
@@ -245,7 +245,7 @@ function Product() {
                         data-swatch-color="red"
                       >
                         <span class="bg-red_color"></span>
-                        <span class="color-text">Red (+$150)</span>
+                        <span class="color-text">Red (+₹150)</span>
                       </a>
                       <a
                         href="javascript:void(0)"
@@ -253,7 +253,7 @@ function Product() {
                         data-swatch-color="orange"
                       >
                         <span class="burnt-orange_color"></span>
-                        <span class="color-text">Orange (+$170)</span>
+                        <span class="color-text">Orange (+₹170)</span>
                       </a>
                       <a
                         href="javascript:void(0)"
@@ -261,7 +261,7 @@ function Product() {
                         data-swatch-color="brown"
                       >
                         <span class="brown_color"></span>
-                        <span class="color-text">Brown (+$120)</span>
+                        <span class="color-text">Brown (+₹120)</span>
                       </a>
                       <a
                         href="javascript:void(0)"
@@ -269,7 +269,7 @@ function Product() {
                         data-swatch-color="umber"
                       >
                         <span class="raw-umber_color"></span>
-                        <span class="color-text">Umber (+$125)</span>
+                        <span class="color-text">Umber (+₹125)</span>
                       </a>
                       <a
                         href="javascript:void(0)"
@@ -277,7 +277,7 @@ function Product() {
                         data-swatch-color="black"
                       >
                         <span class="black_color"></span>
-                        <span class="color-text">Black (+$125)</span>
+                        <span class="color-text">Black (+₹125)</span>
                       </a>
                     </div>
                   </div> */}

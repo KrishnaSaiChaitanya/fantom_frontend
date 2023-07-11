@@ -1,28 +1,3 @@
-// import logo from "./logo.svg";
-// import "./App.css";
-// import Checkout from "./components/Checkout";
-// import Header from "./components/Header";
-// import Cart from "./components/Cart";
-
-// import { createContext, useState } from "react";
-// import Sidebar from "./components/Sidemenu";
-// import Footer from "./components/Footer";
-// import Products from "./components/Products";
-// import ContactUs from "./Pages/ContactUs";
-// import AboutUs from "./Pages/AboutUs";
-// import SignIn from "./Pages/SignIn";
-// import WishList from "./Pages/WishList";
-// import Dashboard from "./components/Dashboard";
-// // import Sidebar from "./components/Sidemenu";
-
-// export const Sidemenu = createContext();
-// function App() {
-//   // const [showSidebar, setshowSidebar] = useState(false);
-
-//   return <div className="App"></div>;
-// }
-
-// export default App;
 import "./App.css";
 
 import {
@@ -48,18 +23,6 @@ import { ToastContainer } from "react-toastify";
 const Layout = () => {
   return (
     <div>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss={false}
-        draggable
-        pauseOnHover
-        theme="light"
-      />
       <Header />
       <Outlet />
       <Footer />

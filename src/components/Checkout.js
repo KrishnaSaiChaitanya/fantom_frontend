@@ -19,7 +19,7 @@ function Checkout() {
                           Country <span class="required">*</span>
                         </label>
                         <select class="myniceselect nice-select wide">
-                          <option data-display="Bangladesh">Bangladesh</option>
+                          <option data-display="Bangladesh">India</option>
                           <option value="uk">London</option>
                           <option value="rou">Romania</option>
                           <option value="fr">French</option>
@@ -44,12 +44,12 @@ function Checkout() {
                         <input placeholder="" type="text" />
                       </div>
                     </div>
-                    <div class="col-md-12">
+                    {/* <div class="col-md-12">
                       <div class="checkout-form-list">
                         <label>Company Name</label>
                         <input placeholder="" type="text" />
                       </div>
-                    </div>
+                    </div> */}
                     <div class="col-md-12">
                       <div class="checkout-form-list">
                         <label>
@@ -269,7 +269,7 @@ function Checkout() {
                           <strong class="product-quantity">× 1</strong>
                         </td>
                         <td class="cart-product-total">
-                          <span class="amount">£165.00</span>
+                          <span class="amount">₹165.00</span>
                         </td>
                       </tr>
                       <tr class="cart_item">
@@ -279,7 +279,7 @@ function Checkout() {
                           <strong class="product-quantity">× 1</strong>
                         </td>
                         <td class="cart-product-total">
-                          <span class="amount">£165.00</span>
+                          <span class="amount">₹165.00</span>
                         </td>
                       </tr>
                     </tbody>
@@ -287,14 +287,14 @@ function Checkout() {
                       <tr class="cart-subtotal">
                         <th>Cart Subtotal</th>
                         <td>
-                          <span class="amount">£215.00</span>
+                          <span class="amount">₹215.00</span>
                         </td>
                       </tr>
                       <tr class="order-total">
                         <th>Order Total</th>
                         <td>
                           <strong>
-                            <span class="amount">£215.00</span>
+                            <span class="amount">₹215.00</span>
                           </strong>
                         </td>
                       </tr>

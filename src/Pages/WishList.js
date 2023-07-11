@@ -32,7 +32,7 @@ function WishList() {
                         <td class="kenne-product-thumbnail">
                           <a href="j/">
                             <img
-                              src="../assets/css/images/shirt-1.webp"
+                              src="../images/shirt-1.webp"
                               alt="Kenne's Wishlist Thumbnail"
                               style={{ maxWidth: "12vw" }}
                             />
@@ -42,7 +42,7 @@ function WishList() {
                           <a href="j/">Juma rema pola</a>
                         </td>
                         <td class="kenne-product-price">
-                          <span class="amount">£23.39</span>
+                          <span class="amount">₹23</span>
                         </td>
                         <td class="kenne-product-stock-status">
                           <span class="in-stock">in stock</span>
@@ -60,7 +60,7 @@ function WishList() {
                         <td class="kenne-product-thumbnail">
                           <a href="j/">
                             <img
-                              src="../assets/css/images/shirt-1.webp"
+                              src="../images/shirt-1.webp"
                               alt="Kenne's Wishlist Thumbnail"
                               style={{ maxWidth: "12vw" }}
                             />
@@ -70,7 +70,7 @@ function WishList() {
                           <a href="j/">Suretin mipen ruma</a>
                         </td>
                         <td class="kenne-product-price">
-                          <span class="amount">£30.50</span>
+                          <span class="amount">₹30</span>
                         </td>
                         <td class="kenne-product-stock-status">
                           <span class="in-stock">in stock</span>
@@ -88,7 +88,7 @@ function WishList() {
                         <td class="kenne-product-thumbnail">
                           <a href="j/">
                             <img
-                              src="../assets/css/images/shirt-1.webp"
+                              src="../images/shirt-1.webp"
                               alt="Kenne's Wishlist Thumbnail"
                               style={{ maxWidth: "12vw" }}
                             />
@@ -98,7 +98,7 @@ function WishList() {
                           <a href="j/">Bag Goodscol model</a>
                         </td>
                         <td class="kenne-product-price">
-                          <span class="amount">£40.19</span>
+                          <span class="amount">₹40</span>
                         </td>
                         <td class="kenne-product-stock-status">
                           <span class="out-stock">out stock</span>

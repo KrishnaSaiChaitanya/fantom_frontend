@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Products() {
-  const [view, setview] = useState("listview");
+  const [view, setview] = useState("grid gridview-3");
   return (
     <div>
       <div class="kenne-content_wrapper">
@@ -59,12 +59,12 @@ function Products() {
                         <a href="single-product.html">
                           <img
                             class="primary-img"
-                            src="../assets/css/images/shirt-1.webp"
+                            src="../images/shirt-1.webp"
                             alt="product "
                           />
                           <img
                             class="secondary-img"
-                            src="../assets/css/images/shirt-2.webp"
+                            src="../images/shirt-2.webp"
                             alt="product "
                           />
                         </a>
@@ -124,8 +124,8 @@ function Products() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -154,17 +154,14 @@ function Products() {
                     <div class="single-product">
                       <div class="product-img">
                         <a href="single-product.html">
-                          <img
-                            src="../assets/css/images/shirt-1.webp"
-                            alt="product "
-                          />
+                          <img src="../images/shirt-1.webp" alt="product " />
                         </a>
                       </div>
                       <div class="product-content">
                         <div class="product-desc_info">
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <h6 class="product-name">
                             <a href="single-product.html">Quibusdam ratione</a>
@@ -258,12 +255,12 @@ function Products() {
                         <a href="single-product.html">
                           <img
                             class="primary-img"
-                            src="../assets/css/images/shirt-1.webp"
+                            src="../images/shirt-1.webp"
                             alt="product "
                           />
                           <img
                             class="secondary-img"
-                            src="../assets/css/images/shirt-2.webp"
+                            src="../images/shirt-2.webp"
                             alt="product "
                           />
                         </a>
@@ -323,8 +320,8 @@ function Products() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -362,8 +359,8 @@ function Products() {
                       <div class="product-content">
                         <div class="product-desc_info">
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <h6 class="product-name">
                             <a href="single-product.html">Quibusdam ratione</a>
@@ -457,12 +454,12 @@ function Products() {
                         <a href="single-product.html">
                           <img
                             class="primary-img"
-                            src="../assets/css/images/shirt-1.webp"
+                            src="../images/shirt-1.webp"
                             alt="product "
                           />
                           <img
                             class="secondary-img"
-                            src="../assets/css/images/shirt-2.webp"
+                            src="../images/shirt-2.webp"
                             alt="product "
                           />
                         </a>
@@ -522,8 +519,8 @@ function Products() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -561,8 +558,8 @@ function Products() {
                       <div class="product-content">
                         <div class="product-desc_info">
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <h6 class="product-name">
                             <a href="single-product.html">Quibusdam ratione</a>
@@ -656,12 +653,12 @@ function Products() {
                         <a href="single-product.html">
                           <img
                             class="primary-img"
-                            src="../assets/css/images/shirt-1.webp"
+                            src="../images/shirt-1.webp"
                             alt="product "
                           />
                           <img
                             class="secondary-img"
-                            src="../assets/css/images/shirt-2.webp"
+                            src="../images/shirt-2.webp"
                             alt="product "
                           />
                         </a>
@@ -721,8 +718,8 @@ function Products() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -760,8 +757,8 @@ function Products() {
                       <div class="product-content">
                         <div class="product-desc_info">
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <h6 class="product-name">
                             <a href="single-product.html">Quibusdam ratione</a>
@@ -855,12 +852,12 @@ function Products() {
                         <a href="single-product.html">
                           <img
                             class="primary-img"
-                            src="../assets/css/images/shirt-1.webp"
+                            src="../images/shirt-1.webp"
                             alt="product "
                           />
                           <img
                             class="secondary-img"
-                            src="../assets/css/images/shirt-2.webp"
+                            src="../images/shirt-2.webp"
                             alt="product "
                           />
                         </a>
@@ -920,8 +917,8 @@ function Products() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -959,8 +956,8 @@ function Products() {
                       <div class="product-content">
                         <div class="product-desc_info">
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <h6 class="product-name">
                             <a href="single-product.html">Quibusdam ratione</a>
@@ -1054,12 +1051,12 @@ function Products() {
                         <a href="single-product.html">
                           <img
                             class="primary-img"
-                            src="../assets/css/images/shirt-1.webp"
+                            src="../images/shirt-1.webp"
                             alt="product "
                           />
                           <img
                             class="secondary-img"
-                            src="../assets/css/images/shirt-2.webp"
+                            src="../images/shirt-2.webp"
                             alt="product "
                           />
                         </a>
@@ -1119,8 +1116,8 @@ function Products() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -1158,8 +1155,8 @@ function Products() {
                       <div class="product-content">
                         <div class="product-desc_info">
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <h6 class="product-name">
                             <a href="single-product.html">Quibusdam ratione</a>
@@ -1253,12 +1250,12 @@ function Products() {
                         <a href="single-product.html">
                           <img
                             class="primary-img"
-                            src="../assets/css/images/shirt-1.webp"
+                            src="../images/shirt-1.webp"
                             alt="product "
                           />
                           <img
                             class="secondary-img"
-                            src="../assets/css/images/shirt-2.webp"
+                            src="../images/shirt-2.webp"
                             alt="product "
                           />
                         </a>
@@ -1318,8 +1315,8 @@ function Products() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -1357,8 +1354,8 @@ function Products() {
                       <div class="product-content">
                         <div class="product-desc_info">
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <h6 class="product-name">
                             <a href="single-product.html">Quibusdam ratione</a>
@@ -1452,12 +1449,12 @@ function Products() {
                         <a href="single-product.html">
                           <img
                             class="primary-img"
-                            src="../assets/css/images/shirt-1.webp"
+                            src="../images/shirt-1.webp"
                             alt="product "
                           />
                           <img
                             class="secondary-img"
-                            src="../assets/css/images/shirt-2.webp"
+                            src="../images/shirt-2.webp"
                             alt="product "
                           />
                         </a>
@@ -1517,8 +1514,8 @@ function Products() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -1556,8 +1553,8 @@ function Products() {
                       <div class="product-content">
                         <div class="product-desc_info">
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <h6 class="product-name">
                             <a href="single-product.html">Quibusdam ratione</a>
@@ -1651,12 +1648,12 @@ function Products() {
                         <a href="single-product.html">
                           <img
                             class="primary-img"
-                            src="../assets/css/images/shirt-1.webp"
+                            src="../images/shirt-1.webp"
                             alt="product "
                           />
                           <img
                             class="secondary-img"
-                            src="../assets/css/images/shirt-2.webp"
+                            src="../images/shirt-2.webp"
                             alt="product "
                           />
                         </a>
@@ -1716,8 +1713,8 @@ function Products() {
                             <a href="single-product.html">Quibusdam ratione</a>
                           </h3>
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <div class="rating-box">
                             <ul>
@@ -1755,8 +1752,8 @@ function Products() {
                       <div class="product-content">
                         <div class="product-desc_info">
                           <div class="price-box">
-                            <span class="new-price">$46.91</span>
-                            <span class="old-price">$50.99</span>
+                            <span class="new-price">₹46.91</span>
+                            <span class="old-price">₹50.99</span>
                           </div>
                           <h6 class="product-name">
                             <a href="single-product.html">Quibusdam ratione</a>

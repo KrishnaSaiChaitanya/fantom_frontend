@@ -32,7 +32,7 @@ function Cart() {
                         <td class="kenne-product-thumbnail">
                           <a href="javascript:void(0)">
                             <img
-                              src="../assets/css/images/shirt-1.webp"
+                              src="..images/shirt-1.webp"
                               alt="Uren's Cart Thumbnail"
                               style={{ maxWidth: "160px" }}
                             />
@@ -42,7 +42,7 @@ function Cart() {
                           <a href="javascript:void(0)">Juma rema pola</a>
                         </td>
                         <td class="kenne-product-price">
-                          <span class="amount">$46.80</span>
+                          <span class="amount">₹46</span>
                         </td>
                         <td class="quantity">
                           <label>Quantity</label>
@@ -61,7 +61,7 @@ function Cart() {
                           </div>
                         </td>
                         <td class="product-subtotal">
-                          <span class="amount">$46.80</span>
+                          <span class="amount">₹46</span>
                         </td>
                       </tr>
                       <tr>
@@ -73,7 +73,7 @@ function Cart() {
                         <td class="kenne-product-thumbnail">
                           <a href="javascript:void(0)">
                             <img
-                              src="../assets/css/images/shirt-1.webp"
+                              src="../images/shirt-1.webp"
                               alt="Uren's Cart Thumbnail"
                               style={{ maxWidth: "160px" }}
                             />
@@ -83,7 +83,7 @@ function Cart() {
                           <a href="javascript:void(0)">Bag Goodscol model</a>
                         </td>
                         <td class="kenne-product-price">
-                          <span class="amount">$71.80</span>
+                          <span class="amount">₹71</span>
                         </td>
                         <td class="quantity">
                           <label>Quantity</label>
@@ -102,7 +102,7 @@ function Cart() {
                           </div>
                         </td>
                         <td class="product-subtotal">
-                          <span class="amount">$71.80</span>
+                          <span class="amount">₹71</span>
                         </td>
                       </tr>
                     </tbody>
@@ -144,10 +144,10 @@ function Cart() {
                       <h2>Cart totals</h2>
                       <ul>
                         <li>
-                          Subtotal <span>$118.60</span>
+                          Subtotal <span>₹118.60</span>
                         </li>
                         <li>
-                          Total <span>$118.60</span>
+                          Total <span>₹118.60</span>
                         </li>
                       </ul>
                       <input
