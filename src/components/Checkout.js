@@ -1,11 +1,55 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import Breadcrumb from "../Pages/Breadcrumb";
 
 function Checkout() {
+
+  const [products,setProducts]=useState([]);
+  const getData=()=>{
+    fetch('./Products.json'
+    ,{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }
+    )
+      .then(function(response){
+        console.log(response)
+        return response.json();
+      })
+      .then(function(myJson) {
+        console.log(myJson);
+        setProducts(myJson.products)
+      }).catch(
+        (err)=>{
+          console.log(err)
+        }
+      )
+  }
+
+  useEffect(()=>{
+    getData()
+  },[])
+
+  const [total,setTotal]=useState(0)
+  //whenever products details changes total changes
+  useEffect(()=>{
+    let total1=0;
+    
+    products.map((Product,key)=>{
+      total1+= Product.price * Product.quantity;
+      console.log(total1)
+    })
+    total1=total1.toFixed(2);
+    setTotal(total1);
+    
+  },[products])
+
   return (
     <div>
       <Breadcrumb name={"Checkout"} />
       <div class="checkout-area">
+      {products.length?(
         <div class="container">
           <div class="row">
             <div class="col-lg-6 col-12">
@@ -248,6 +292,7 @@ function Checkout() {
             </div>
 
             <div class="col-lg-6 col-12 d-flex align-items-center">
+             
               <div class="your-order">
                 <h3>Your order</h3>
                 <div class="your-order-table table-responsive">
@@ -262,39 +307,32 @@ function Checkout() {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr class="cart_item">
-                        <td class="cart-product-name">
+                      {products.map((product,key)=>(
+                        product.inStock&&(
+                        <tr class="cart_item">
+                        <td class="cart-product-name text-center">
                           {" "}
-                          Vestibulum suscipit
-                          <strong class="product-quantity">× 1</strong>
+                          {product.title}
+                          <strong class="product-quantity"> × {product.quantity}</strong>
                         </td>
-                        <td class="cart-product-total">
-                          <span class="amount">₹165.00</span>
+                        <td class="cart-product-total text-center">
+                          <span class="amount">₹{(product.quantity*product.price).toFixed(2)}</span>
                         </td>
-                      </tr>
-                      <tr class="cart_item">
-                        <td class="cart-product-name">
-                          {" "}
-                          Vestibulum suscipit
-                          <strong class="product-quantity">× 1</strong>
-                        </td>
-                        <td class="cart-product-total">
-                          <span class="amount">₹165.00</span>
-                        </td>
-                      </tr>
+                      </tr>)
+                      ))}                      
                     </tbody>
                     <tfoot>
                       <tr class="cart-subtotal">
                         <th>Cart Subtotal</th>
-                        <td>
-                          <span class="amount">₹215.00</span>
+                        <td className="text-center">
+                          <span class="amount">₹{total}</span>
                         </td>
                       </tr>
                       <tr class="order-total">
                         <th>Order Total</th>
-                        <td>
+                        <td className="text-center">
                           <strong>
-                            <span class="amount">₹215.00</span>
+                            <span class="amount">₹{total}</span>
                           </strong>
                         </td>
                       </tr>
@@ -404,6 +442,10 @@ function Checkout() {
             </div>
           </div>
         </div>
+        ):(
+          <div className="text-center d-flex justify-content-center align-items-center p-4 fs-3" >No items in your Checkout</div>
+        )
+        }
       </div>
     </div>
   );
