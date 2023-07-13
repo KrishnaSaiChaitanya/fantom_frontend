@@ -3,6 +3,7 @@ import SignIn from "../Pages/SignIn";
 import SignUp from "../Pages/SignUp";
 import { Link } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import Product from "./Product";
 
 function Header() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -13,6 +14,8 @@ function Header() {
       const currentPosition = window.pageYOffset;
       setScrollPosition(currentPosition);
       setIsVisible(currentPosition > 220);
+      let quantity2=0;
+      
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -22,6 +25,56 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [products,setProducts]=useState([]);
+  const [total,setTotal]=useState(0);
+  const [quantity,setQuantity]=useState(0)
+  
+  const getData=()=>{
+    fetch('./Products.json'
+    ,{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }
+    )
+      .then(function(response){
+        console.log(response)
+        return response.json();
+      })
+      .then(function(myJson) {
+        console.log(myJson);
+        setProducts(myJson.products)
+      }).catch((err)=>{
+        console.log(err);
+      })
+  }
+
+  useEffect(()=>{
+    getData()
+  },[])
+
+  //whenever products details changes total changes
+  useEffect(()=>{
+    let total1=0;
+    let quantity1=0;
+    products.map((Product,key)=>{
+      total1+= Product.price * Product.quantity;
+      quantity1+=Product.quantity;
+      console.log(total1)
+    })
+    total1=total1.toFixed(2);
+    setTotal(total1);
+    setQuantity(quantity1);
+  },[products])
+  let records;
+  if(products.length>3){
+     records=products.slice(0,3)
+  }else{
+     records= products;
+  }
+  
   return (
     <header class="main-header_area">
       <div class="header-top_area d-none d-lg-block">
@@ -152,12 +205,12 @@ function Header() {
                             data-bs-target="#offcanvas"
                             role="button"
                           >
-                            <span class="item-count">03</span>
+                            <span class="item-count">{quantity}</span>
                             <i class="ion-bag"></i>
                           </div>
                           <div class="minicart-front_text">
                             <span>Cart:</span>
-                            <span class="total-price">462.4</span>
+                            <span class="total-price">{total}</span>
                           </div>
                         </a>
                       </li>
@@ -187,7 +240,7 @@ function Header() {
                             data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvas"
                           >
-                            <span class="item-count">03</span>
+                            <span class="item-count">{quantity}</span>
                             <i class="ion-bag"></i>
                           </div>
                         </a>
@@ -646,7 +699,7 @@ function Header() {
                                 data-bs-toggle="offcanvas"
                                 data-bs-target="#offcanvas"
                               >
-                                <span class="item-count">03</span>
+                                <span class="item-count">{quantity}</span>
                                 <i class="ion-bag"></i>
                               </div>
                             </a>
@@ -1023,83 +1076,58 @@ function Header() {
                   ></i>
                 </div>
                 <ul class="minicart-list p-3 justify-content-center">
-                  <li class="minicart-product d-flex flex-row">
-                    <div class="product-item_img">
-                      <img
-                        src="../images/shirt-1.webp"
-                        alt="Kenne's Product"
-                        style={{ maxWidth: "120px" }}
-                      />
-                    </div>
-                    <div
-                      class="product-item_content d-flex flex-column px-3"
-                      style={{ justifyContent: "center" }}
-                    >
-                      <a
-                        class="product-item_title"
-                        href="shop-left-sidebar.html"
+                  {products.length?
+                  
+                  records.map((Product,key)=>(
+                    (
+                      
+                      
+                      (
+                      <li class="minicart-product d-flex flex-row" key={key}>
+                      <div class="product-item_img">
+                        <img
+                          src={Product.image}
+                          alt="Kenne's Product Image"
+                          style={{ maxWidth: "120px" }}
+                        />
+                      </div>
+                      <div
+                        class="product-item_content d-flex flex-column px-3"
+                        style={{ justifyContent: "center" }}
                       >
-                        Autem ipsa ad
+                        <a
+                          class="product-item_title"
+                          href="shop-left-sidebar.html"
+                        >
+                         {Product.title}
+                        </a>
+                        <span class="product-item_quantity">{Product.quantity} x ₹{Product.price}</span>
+                      </div>
+                      <a class="product-item_remove" href="/">
+                        <i class="ion-android-close"></i>
                       </a>
-                      <span class="product-item_quantity">1 x $145.80</span>
-                    </div>
-                    <a class="product-item_remove" href="/">
-                      <i class="ion-android-close"></i>
-                    </a>
-                  </li>
-                  <li class="minicart-product d-flex flex-row">
-                    <div class="product-item_img">
-                      <img
-                        src="../images/shirt-1.webp"
-                        alt="Kenne's Product"
-                        style={{ maxWidth: "120px" }}
-                      />
-                    </div>
-                    <div
-                      class="product-item_content d-flex flex-column px-3"
-                      style={{ justifyContent: "center" }}
-                    >
-                      <a
-                        class="product-item_title"
-                        href="shop-left-sidebar.html"
-                      >
-                        Autem ipsa ad
-                      </a>
-                      <span class="product-item_quantity">1 x $145.80</span>
-                    </div>
-                    <a class="product-item_remove" href="/">
-                      <i class="ion-android-close"></i>
-                    </a>
-                  </li>
-                  <li class="minicart-product d-flex flex-row">
-                    <div class="product-item_img">
-                      <img
-                        src="../images/shirt-1.webp"
-                        alt="Kenne's Product Image"
-                        style={{ maxWidth: "120px" }}
-                      />
-                    </div>
-                    <div
-                      class="product-item_content d-flex flex-column px-3"
-                      style={{ justifyContent: "center" }}
-                    >
-                      <a
-                        class="product-item_title"
-                        href="shop-left-sidebar.html"
-                      >
-                        Autem ipsa ad
-                      </a>
-                      <span class="product-item_quantity">1 x $145.80</span>
-                    </div>
-                    <a class="product-item_remove" href="/">
-                      <i class="ion-android-close"></i>
-                    </a>
-                  </li>
+                    </li>)
+                    )
+                  ))
+                  :(
+                    <li className="text-center">No items in your cart</li>
+                  )}
+
+                  
                 </ul>
               </div>
+              {products.length?(
+              <div class="minicart-btn_area p-1">
+                <a href="/cart" class="kenne-btn kenne-btn_fullwidth">
+                  View More
+                </a>
+              </div>
+              ):(
+                <div></div>
+              )}
               <div class="minicart-item_total d-flex flex-row justify-content-between p-2">
                 <span>Subtotal</span>
-                <span class="ammount">$462.4‬0</span>
+                <span class="ammount">₹{total}</span>
               </div>
               <div class="minicart-btn_area p-1">
                 <a href="/cart" class="kenne-btn kenne-btn_fullwidth">
