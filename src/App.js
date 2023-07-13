@@ -19,11 +19,13 @@ import ContactUs from "./Pages/ContactUs";
 import Product from "./components/Product";
 import Not_found from "./Pages/Not_found";
 import { ToastContainer } from "react-toastify";
+import Animation from "./components/Animation";
 
 const Layout = () => {
   return (
     <div>
       <Header />
+      {/* <Animation /> */}
       <Outlet />
       <Footer />
     </div>

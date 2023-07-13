@@ -117,13 +117,13 @@ function Home() {
                             class="primary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273744/3-1_nsgqfk.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                           <img
                             class="secondary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273722/1-1_jkssrf.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                         </a>
                         <span class="sticker-2">Hot</span>
@@ -185,25 +185,6 @@ function Home() {
                             <span class="new-price">₹40</span>
                             <span class="old-price">₹50.99</span>
                           </div>
-                          <div class="rating-box">
-                            <ul>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-half"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-outline"></i>
-                              </li>
-                            </ul>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -216,13 +197,13 @@ function Home() {
                             class="primary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273744/3-1_nsgqfk.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                           <img
                             class="secondary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273722/1-1_jkssrf.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                         </a>
                         <span class="sticker-2">Hot</span>
@@ -252,7 +233,7 @@ function Home() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
+                            {/* <li>
                               <a
                                 href="compare.html"
                                 data-bs-toggle="tooltip"
@@ -261,7 +242,7 @@ function Home() {
                               >
                                 <i class="ion-ios-reload"></i>
                               </a>
-                            </li>
+                            </li> */}
                             <li>
                               <a
                                 href="cart.html"
@@ -284,25 +265,6 @@ function Home() {
                             <span class="new-price">₹40</span>
                             <span class="old-price">₹50.99</span>
                           </div>
-                          <div class="rating-box">
-                            <ul>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-half"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-outline"></i>
-                              </li>
-                            </ul>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -315,13 +277,13 @@ function Home() {
                             class="primary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273744/3-1_nsgqfk.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                           <img
                             class="secondary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273722/1-1_jkssrf.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                         </a>
                         <span class="sticker-2">Hot</span>
@@ -351,7 +313,7 @@ function Home() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
+                            {/* <li>
                               <a
                                 href="compare.html"
                                 data-bs-toggle="tooltip"
@@ -360,7 +322,7 @@ function Home() {
                               >
                                 <i class="ion-ios-reload"></i>
                               </a>
-                            </li>
+                            </li> */}
                             <li>
                               <a
                                 href="cart.html"
@@ -383,25 +345,6 @@ function Home() {
                             <span class="new-price">₹40</span>
                             <span class="old-price">₹50.99</span>
                           </div>
-                          <div class="rating-box">
-                            <ul>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-half"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-outline"></i>
-                              </li>
-                            </ul>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -414,13 +357,13 @@ function Home() {
                             class="primary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273744/3-1_nsgqfk.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                           <img
                             class="secondary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273722/1-1_jkssrf.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                         </a>
                         <span class="sticker-2">Hot</span>
@@ -450,7 +393,7 @@ function Home() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
+                            {/* <li>
                               <a
                                 href="compare.html"
                                 data-bs-toggle="tooltip"
@@ -459,7 +402,7 @@ function Home() {
                               >
                                 <i class="ion-ios-reload"></i>
                               </a>
-                            </li>
+                            </li> */}
                             <li>
                               <a
                                 href="cart.html"
@@ -482,25 +425,6 @@ function Home() {
                             <span class="new-price">₹40</span>
                             <span class="old-price">₹50.99</span>
                           </div>
-                          <div class="rating-box">
-                            <ul>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-half"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-outline"></i>
-                              </li>
-                            </ul>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -513,13 +437,13 @@ function Home() {
                             class="primary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273744/3-1_nsgqfk.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                           <img
                             class="secondary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273722/1-1_jkssrf.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                         </a>
                         <span class="sticker">Bestseller</span>
@@ -549,7 +473,7 @@ function Home() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
+                            {/* <li>
                               <a
                                 href="compare.html"
                                 data-bs-toggle="tooltip"
@@ -558,7 +482,7 @@ function Home() {
                               >
                                 <i class="ion-ios-reload"></i>
                               </a>
-                            </li>
+                            </li> */}
                             <li>
                               <a
                                 href="cart.html"
@@ -581,25 +505,6 @@ function Home() {
                             <span class="new-price">₹40</span>
                             <span class="old-price">₹50.99</span>
                           </div>
-                          <div class="rating-box">
-                            <ul>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-half"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-outline"></i>
-                              </li>
-                            </ul>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -612,13 +517,13 @@ function Home() {
                             class="primary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273744/3-1_nsgqfk.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                           <img
                             class="secondary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273722/1-1_jkssrf.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                         </a>
                         <span class="sticker-2">Hot</span>
@@ -648,7 +553,7 @@ function Home() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
+                            {/* <li>
                               <a
                                 href="compare.html"
                                 data-bs-toggle="tooltip"
@@ -657,7 +562,7 @@ function Home() {
                               >
                                 <i class="ion-ios-reload"></i>
                               </a>
-                            </li>
+                            </li> */}
                             <li>
                               <a
                                 href="cart.html"
@@ -680,25 +585,6 @@ function Home() {
                             <span class="new-price">₹40</span>
                             <span class="old-price">₹50.99</span>
                           </div>
-                          <div class="rating-box">
-                            <ul>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-half"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-outline"></i>
-                              </li>
-                            </ul>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -711,13 +597,13 @@ function Home() {
                             class="primary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273744/3-1_nsgqfk.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                           <img
                             class="secondary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273722/1-1_jkssrf.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                         </a>
                         <span class="sticker-2">Hot</span>
@@ -747,16 +633,7 @@ function Home() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
-                              <a
-                                href="compare.html"
-                                data-bs-toggle="tooltip"
-                                data-placement="right"
-                                title="Add To Compare"
-                              >
-                                <i class="ion-ios-reload"></i>
-                              </a>
-                            </li>
+
                             <li>
                               <a
                                 href="cart.html"
@@ -779,25 +656,6 @@ function Home() {
                             <span class="new-price">₹40</span>
                             <span class="old-price">₹50.99</span>
                           </div>
-                          <div class="rating-box">
-                            <ul>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-half"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-outline"></i>
-                              </li>
-                            </ul>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -810,13 +668,13 @@ function Home() {
                             class="primary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273744/3-1_nsgqfk.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                           <img
                             class="secondary-img"
                             src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273722/1-1_jkssrf.webp"
                             alt="Product "
-                            style={{ maxWidth: "200px" }}
+                            style={{ maxWidth: "100%" }}
                           />
                         </a>
                         <span class="sticker-2">Hot</span>
@@ -846,7 +704,7 @@ function Home() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
+                            {/* <li>
                               <a
                                 href="compare.html"
                                 data-bs-toggle="tooltip"
@@ -855,7 +713,7 @@ function Home() {
                               >
                                 <i class="ion-ios-reload"></i>
                               </a>
-                            </li>
+                            </li> */}
                             <li>
                               <a
                                 href="cart.html"
@@ -877,25 +735,6 @@ function Home() {
                           <div class="price-box">
                             <span class="new-price">₹40</span>
                             <span class="old-price">₹50.99</span>
-                          </div>
-                          <div class="rating-box">
-                            <ul>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li>
-                                <i class="ion-ios-star"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-half"></i>
-                              </li>
-                              <li class="silver-color">
-                                <i class="ion-ios-star-outline"></i>
-                              </li>
-                            </ul>
                           </div>
                         </div>
                       </div>

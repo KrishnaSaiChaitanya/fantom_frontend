@@ -16,7 +16,7 @@ function Products() {
                     data-toggle="tooltip"
                     data-placement="top"
                     title="Grid View"
-                    // onClick={() => setview("grid gridview-3")}
+                    onClick={() => setview("grid gridview-3")}
                   >
                     <i class="fa fa-th"></i>
                   </a>
@@ -26,7 +26,7 @@ function Products() {
                     data-toggle="tooltip"
                     data-placement="top"
                     title="List View"
-                    // onClick={() => setview("listview")}
+                    onClick={() => setview("listview")}
                   >
                     <i class="fa fa-th-list"></i>
                   </a>
@@ -95,16 +95,7 @@ function Products() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
-                              <a
-                                href="compare.html"
-                                data-bs-toggle="tooltip"
-                                data-placement="right"
-                                title="Add To Compare"
-                              >
-                                <i class="ion-ios-reload"></i>
-                              </a>
-                            </li>
+
                             <li>
                               <a
                                 href="cart.html"
@@ -291,16 +282,7 @@ function Products() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
-                              <a
-                                href="compare.html"
-                                data-bs-toggle="tooltip"
-                                data-placement="right"
-                                title="Add To Compare"
-                              >
-                                <i class="ion-ios-reload"></i>
-                              </a>
-                            </li>
+
                             <li>
                               <a
                                 href="cart.html"
@@ -490,16 +472,7 @@ function Products() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
-                              <a
-                                href="compare.html"
-                                data-bs-toggle="tooltip"
-                                data-placement="right"
-                                title="Add To Compare"
-                              >
-                                <i class="ion-ios-reload"></i>
-                              </a>
-                            </li>
+
                             <li>
                               <a
                                 href="cart.html"
@@ -689,16 +662,7 @@ function Products() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
-                              <a
-                                href="compare.html"
-                                data-bs-toggle="tooltip"
-                                data-placement="right"
-                                title="Add To Compare"
-                              >
-                                <i class="ion-ios-reload"></i>
-                              </a>
-                            </li>
+
                             <li>
                               <a
                                 href="cart.html"
@@ -888,16 +852,7 @@ function Products() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
-                              <a
-                                href="compare.html"
-                                data-bs-toggle="tooltip"
-                                data-placement="right"
-                                title="Add To Compare"
-                              >
-                                <i class="ion-ios-reload"></i>
-                              </a>
-                            </li>
+
                             <li>
                               <a
                                 href="cart.html"
@@ -1087,16 +1042,7 @@ function Products() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
-                              <a
-                                href="compare.html"
-                                data-bs-toggle="tooltip"
-                                data-placement="right"
-                                title="Add To Compare"
-                              >
-                                <i class="ion-ios-reload"></i>
-                              </a>
-                            </li>
+
                             <li>
                               <a
                                 href="cart.html"
@@ -1286,16 +1232,7 @@ function Products() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
-                              <a
-                                href="compare.html"
-                                data-bs-toggle="tooltip"
-                                data-placement="right"
-                                title="Add To Compare"
-                              >
-                                <i class="ion-ios-reload"></i>
-                              </a>
-                            </li>
+
                             <li>
                               <a
                                 href="cart.html"
@@ -1485,16 +1422,7 @@ function Products() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
-                              <a
-                                href="compare.html"
-                                data-bs-toggle="tooltip"
-                                data-placement="right"
-                                title="Add To Compare"
-                              >
-                                <i class="ion-ios-reload"></i>
-                              </a>
-                            </li>
+
                             <li>
                               <a
                                 href="cart.html"
@@ -1684,16 +1612,7 @@ function Products() {
                                 <i class="ion-ios-heart-outline"></i>
                               </a>
                             </li>
-                            <li>
-                              <a
-                                href="compare.html"
-                                data-bs-toggle="tooltip"
-                                data-placement="right"
-                                title="Add To Compare"
-                              >
-                                <i class="ion-ios-reload"></i>
-                              </a>
-                            </li>
+
                             <li>
                               <a
                                 href="cart.html"
