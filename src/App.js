@@ -20,6 +20,7 @@ import Product from "./components/Product";
 import Not_found from "./Pages/Not_found";
 import { ToastContainer } from "react-toastify";
 
+
 const Layout = () => {
   return (
     <div>
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
         element: <Products />,
       },
       {
-        path: "/product",
+        path: "/product/:id",
         element: <Product />,
       },
       {
