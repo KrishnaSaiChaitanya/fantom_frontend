@@ -48,21 +48,21 @@ function Checkout() {
   return (
     <div>
       <Breadcrumb name={"Checkout"} />
-      <div class="checkout-area">
+      <div className="checkout-area">
       {products.length?(
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-12">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-12">
               <form action="/">
-                <div class="checkbox-form">
+                <div className="checkbox-form">
                   <h3>Billing Details</h3>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="country-select clearfix">
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="country-select clearfix">
                         <label>
-                          Country <span class="required">*</span>
+                          Country <span className="required">*</span>
                         </label>
-                        <select class="myniceselect nice-select wide">
+                        <select className="myniceselect nice-select wide">
                           <option data-display="Bangladesh">India</option>
                           <option value="uk">London</option>
                           <option value="rou">Romania</option>
@@ -72,92 +72,92 @@ function Checkout() {
                         </select>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="checkout-form-list">
+                    <div className="col-md-6">
+                      <div className="checkout-form-list">
                         <label>
-                          First Name <span class="required">*</span>
+                          First Name <span className="required">*</span>
                         </label>
                         <input placeholder="" type="text" />
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="checkout-form-list">
+                    <div className="col-md-6">
+                      <div className="checkout-form-list">
                         <label>
-                          Last Name <span class="required">*</span>
+                          Last Name <span className="required">*</span>
                         </label>
                         <input placeholder="" type="text" />
                       </div>
                     </div>
-                    {/* <div class="col-md-12">
-                      <div class="checkout-form-list">
+                    {/* <div className="col-md-12">
+                      <div className="checkout-form-list">
                         <label>Company Name</label>
                         <input placeholder="" type="text" />
                       </div>
                     </div> */}
-                    <div class="col-md-12">
-                      <div class="checkout-form-list">
+                    <div className="col-md-12">
+                      <div className="checkout-form-list">
                         <label>
-                          Address <span class="required">*</span>
+                          Address <span className="required">*</span>
                         </label>
                         <input placeholder="Street address" type="text" />
                       </div>
                     </div>
-                    <div class="col-md-12">
-                      <div class="checkout-form-list">
+                    <div className="col-md-12">
+                      <div className="checkout-form-list">
                         <input
                           placeholder="Apartment, suite, unit etc. (optional)"
                           type="text"
                         />
                       </div>
                     </div>
-                    <div class="col-md-12">
-                      <div class="checkout-form-list">
+                    <div className="col-md-12">
+                      <div className="checkout-form-list">
                         <label>
-                          Town / City <span class="required">*</span>
+                          Town / City <span className="required">*</span>
                         </label>
                         <input type="text" />
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="checkout-form-list">
+                    <div className="col-md-6">
+                      <div className="checkout-form-list">
                         <label>
-                          State / County <span class="required">*</span>
+                          State / County <span className="required">*</span>
                         </label>
                         <input placeholder="" type="text" />
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="checkout-form-list">
+                    <div className="col-md-6">
+                      <div className="checkout-form-list">
                         <label>
-                          Postcode / Zip <span class="required">*</span>
+                          Postcode / Zip <span className="required">*</span>
                         </label>
                         <input placeholder="" type="text" />
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="checkout-form-list">
+                    <div className="col-md-6">
+                      <div className="checkout-form-list">
                         <label>
-                          Email Address <span class="required">*</span>
+                          Email Address <span className="required">*</span>
                         </label>
                         <input placeholder="" type="email" />
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="checkout-form-list">
+                    <div className="col-md-6">
+                      <div className="checkout-form-list">
                         <label>
-                          Phone <span class="required">*</span>
+                          Phone <span className="required">*</span>
                         </label>
                         <input type="text" />
                       </div>
                     </div>
-                    {/* <div class="col-md-12">
-                      <div class="checkout-form-list create-acc">
+                    {/* <div className="col-md-12">
+                      <div className="checkout-form-list create-acc">
                         <input id="cbox" type="checkbox" />
                         <label>Create an account?</label>
                       </div>
                       <div
                         id="cbox-info"
-                        class="checkout-form-list create-account"
+                        className="checkout-form-list create-account"
                       >
                         <p>
                           Create an account by entering the information below.
@@ -165,26 +165,26 @@ function Checkout() {
                           top of the page.
                         </p>
                         <label>
-                          Account password <span class="required">*</span>
+                          Account password <span className="required">*</span>
                         </label>
                         <input placeholder="password" type="password" />
                       </div>
                     </div> */}
                   </div>
-                  {/* <div class="different-address">
-                    <div class="ship-different-title">
+                  {/* <div className="different-address">
+                    <div className="ship-different-title">
                       <h3>
                         <label>Ship to a different address?</label>
                         <input id="ship-box" type="checkbox" />
                       </h3>
                     </div>
-                    <div id="ship-box-info" class="row">
-                      <div class="col-md-12">
-                        <div class="myniceselect country-select clearfix">
+                    <div id="ship-box-info" className="row">
+                      <div className="col-md-12">
+                        <div className="myniceselect country-select clearfix">
                           <label>
-                            Country <span class="required">*</span>
+                            Country <span className="required">*</span>
                           </label>
-                          <select class="nice-select myniceselect wide">
+                          <select className="nice-select myniceselect wide">
                             <option data-display="Bangladesh">
                               Bangladesh
                             </option>
@@ -196,87 +196,87 @@ function Checkout() {
                           </select>
                         </div>
                       </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
+                      <div className="col-md-12">
+                        <div className="checkout-form-list">
                           <label>
-                            First Name <span class="required">*</span>
+                            First Name <span className="required">*</span>
                           </label>
                           <input placeholder="" type="text" />
                         </div>
                       </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
+                      <div className="col-md-12">
+                        <div className="checkout-form-list">
                           <label>
-                            Last Name <span class="required">*</span>
+                            Last Name <span className="required">*</span>
                           </label>
                           <input placeholder="" type="text" />
                         </div>
                       </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
+                      <div className="col-md-12">
+                        <div className="checkout-form-list">
                           <label>Company Name</label>
                           <input placeholder="" type="text" />
                         </div>
                       </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
+                      <div className="col-md-12">
+                        <div className="checkout-form-list">
                           <label>
-                            Address <span class="required">*</span>
+                            Address <span className="required">*</span>
                           </label>
                           <input placeholder="Street address" type="text" />
                         </div>
                       </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
+                      <div className="col-md-12">
+                        <div className="checkout-form-list">
                           <input
                             placeholder="Apartment, suite, unit etc. (optional)"
                             type="text"
                           />
                         </div>
                       </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
+                      <div className="col-md-12">
+                        <div className="checkout-form-list">
                           <label>
-                            Town / City <span class="required">*</span>
+                            Town / City <span className="required">*</span>
                           </label>
                           <input type="text" />
                         </div>
                       </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
+                      <div className="col-md-12">
+                        <div className="checkout-form-list">
                           <label>
-                            State / County <span class="required">*</span>
+                            State / County <span className="required">*</span>
                           </label>
                           <input placeholder="" type="text" />
                         </div>
                       </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
+                      <div className="col-md-12">
+                        <div className="checkout-form-list">
                           <label>
-                            Postcode / Zip <span class="required">*</span>
+                            Postcode / Zip <span className="required">*</span>
                           </label>
                           <input placeholder="" type="text" />
                         </div>
                       </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
+                      <div className="col-md-12">
+                        <div className="checkout-form-list">
                           <label>
-                            Email Address <span class="required">*</span>
+                            Email Address <span className="required">*</span>
                           </label>
                           <input placeholder="" type="email" />
                         </div>
                       </div>
-                      <div class="col-md-12">
-                        <div class="checkout-form-list">
+                      <div className="col-md-12">
+                        <div className="checkout-form-list">
                           <label>
-                            Phone <span class="required">*</span>
+                            Phone <span className="required">*</span>
                           </label>
                           <input type="text" />
                         </div>
                       </div>
                     </div>
-                    <div class="order-notes">
-                      <div class="checkout-form-list checkout-form-list-2">
+                    <div className="order-notes">
+                      <div className="checkout-form-list checkout-form-list-2">
                         <label>Order Notes</label>
                         <textarea
                           id="checkout-mess"
@@ -291,63 +291,63 @@ function Checkout() {
               </form>
             </div>
 
-            <div class="col-lg-6 col-12 d-flex align-items-center">
+            <div className="col-lg-6 col-12 d-flex align-items-center">
              
-              <div class="your-order">
+              <div className="your-order">
                 <h3>Your order</h3>
-                <div class="your-order-table table-responsive">
+                <div className="your-order-table table-responsive">
                   <table
-                    class="table table-secondary"
+                    className="table table-secondary"
                     style={{ backgroundColor: "red" }}
                   >
                     <thead className="thead-light">
                       <tr>
-                        <th class="cart-product-name">Product</th>
-                        <th class="cart-product-total">Total</th>
+                        <th className="cart-product-name">Product</th>
+                        <th className="cart-product-total">Total</th>
                       </tr>
                     </thead>
                     <tbody>
                       {products.map((product,key)=>(
                         product.inStock&&(
-                        <tr class="cart_item">
-                        <td class="cart-product-name text-center">
+                        <tr className="cart_item">
+                        <td className="cart-product-name text-center">
                           {" "}
                           {product.title}
-                          <strong class="product-quantity"> × {product.quantity}</strong>
+                          <strong className="product-quantity"> × {product.quantity}</strong>
                         </td>
-                        <td class="cart-product-total text-center">
-                          <span class="amount">₹{(product.quantity*product.price).toFixed(2)}</span>
+                        <td className="cart-product-total text-center">
+                          <span className="amount">₹{(product.quantity*product.price).toFixed(2)}</span>
                         </td>
                       </tr>)
                       ))}                      
                     </tbody>
                     <tfoot>
-                      <tr class="cart-subtotal">
+                      <tr className="cart-subtotal">
                         <th>Cart Subtotal</th>
                         <td className="text-center">
-                          <span class="amount">₹{total}</span>
+                          <span className="amount">₹{total}</span>
                         </td>
                       </tr>
-                      <tr class="order-total">
+                      <tr className="order-total">
                         <th>Order Total</th>
                         <td className="text-center">
                           <strong>
-                            <span class="amount">₹{total}</span>
+                            <span className="amount">₹{total}</span>
                           </strong>
                         </td>
                       </tr>
                     </tfoot>
                   </table>
                 </div>
-                <div class="payment-method">
-                  <div class="payment-accordion">
+                <div className="payment-method">
+                  <div className="payment-accordion">
                     <div id="accordion">
-                      <div class="card">
-                        <div class="card-header" id="#payment-1">
-                          <h5 class="panel-title">
+                      <div className="card">
+                        <div className="card-header" id="#payment-1">
+                          <h5 className="panel-title">
                             <a
                               href="javascript:void(0)"
-                              class=""
+                              className=""
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseOne"
                               aria-expanded="true"
@@ -359,10 +359,10 @@ function Checkout() {
                         </div>
                         <div
                           id="collapseOne"
-                          class="collapse show"
+                          className="collapse show"
                           data-bs-parent="#accordion"
                         >
-                          <div class="card-body">
+                          <div className="card-body">
                             <p>
                               Make your payment directly into our bank account.
                               Please use your Order ID as the payment reference.
@@ -372,12 +372,12 @@ function Checkout() {
                           </div>
                         </div>
                       </div>
-                      <div class="card">
-                        <div class="card-header" id="#payment-2">
-                          <h5 class="panel-title">
+                      <div className="card">
+                        <div className="card-header" id="#payment-2">
+                          <h5 className="panel-title">
                             <a
                               href="javascript:void(0)"
-                              class="collapsed"
+                              className="collapsed"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseTwo"
                               aria-expanded="false"
@@ -389,10 +389,10 @@ function Checkout() {
                         </div>
                         <div
                           id="collapseTwo"
-                          class="collapse"
+                          className="collapse"
                           data-bs-parent="#accordion"
                         >
-                          <div class="card-body">
+                          <div className="card-body">
                             <p>
                               Make your payment directly into our bank account.
                               Please use your Order ID as the payment reference.
@@ -402,12 +402,12 @@ function Checkout() {
                           </div>
                         </div>
                       </div>
-                      <div class="card">
-                        <div class="card-header" id="#payment-3">
-                          <h5 class="panel-title">
+                      <div className="card">
+                        <div className="card-header" id="#payment-3">
+                          <h5 className="panel-title">
                             <a
                               href="javascript:void(0)"
-                              class="collapsed"
+                              className="collapsed"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseThree"
                               aria-expanded="false"
@@ -419,10 +419,10 @@ function Checkout() {
                         </div>
                         <div
                           id="collapseThree"
-                          class="collapse"
+                          className="collapse"
                           data-bs-parent="#accordion"
                         >
-                          <div class="card-body">
+                          <div className="card-body">
                             <p>
                               Make your payment directly into our bank account.
                               Please use your Order ID as the payment reference.
@@ -433,7 +433,7 @@ function Checkout() {
                         </div>
                       </div>
                     </div>
-                    <div class="order-button-payment">
+                    <div className="order-button-payment">
                       <input value="Place order" type="submit" />
                     </div>
                   </div>

@@ -4,19 +4,19 @@ function Dashboard() {
   return (
     <div>
       {" "}
-      <main class="page-content">
-        <div class="account-page-area">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3">
+      <main className="page-content">
+        <div className="account-page-area">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-3">
                 <ul
-                  class="nav myaccount-tab-trigger"
+                  className="nav myaccount-tab-trigger"
                   id="account-page-tab"
                   role="tablist"
                 >
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <a
-                      class="nav-link active"
+                      className="nav-link active"
                       id="account-dashboard-tab"
                       data-bs-toggle="tab"
                       href="#account-dashboard"
@@ -27,9 +27,9 @@ function Dashboard() {
                       Dashboard
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <a
-                      class="nav-link"
+                      className="nav-link"
                       id="account-orders-tab"
                       data-bs-toggle="tab"
                       href="#account-orders"
@@ -40,9 +40,9 @@ function Dashboard() {
                       Orders
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <a
-                      class="nav-link"
+                      className="nav-link"
                       id="account-address-tab"
                       data-bs-toggle="tab"
                       href="#account-address"
@@ -53,9 +53,9 @@ function Dashboard() {
                       Addresses
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <a
-                      class="nav-link"
+                      className="nav-link"
                       id="account-details-tab"
                       data-bs-toggle="tab"
                       href="#account-details"
@@ -66,9 +66,9 @@ function Dashboard() {
                       Account Details
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <a
-                      class="nav-link"
+                      className="nav-link"
                       id="account-logout-tab"
                       href="login-register.html"
                       role="tab"
@@ -79,18 +79,18 @@ function Dashboard() {
                   </li>
                 </ul>
               </div>
-              <div class="col-lg-9">
+              <div className="col-lg-9">
                 <div
-                  class="tab-content myaccount-tab-content"
+                  className="tab-content myaccount-tab-content"
                   id="account-page-tab-content"
                 >
                   <div
-                    class="tab-pane fade show active"
+                    className="tab-pane fade show active"
                     id="account-dashboard"
                     role="tabpanel"
                     aria-labelledby="account-dashboard-tab"
                   >
-                    <div class="myaccount-dashboard">
+                    <div className="myaccount-dashboard">
                       <p>
                         Hello <b>Edwin Adams</b> (not Edwin Adams?{" "}
                         <a href="login-register.html">Sign out</a>)
@@ -106,15 +106,15 @@ function Dashboard() {
                     </div>
                   </div>
                   <div
-                    class="tab-pane fade"
+                    className="tab-pane fade"
                     id="account-orders"
                     role="tabpanel"
                     aria-labelledby="account-orders-tab"
                   >
-                    <div class="myaccount-orders">
-                      <h4 class="small-title">MY ORDERS</h4>
-                      <div class="table-responsive">
-                        <table class="table table-bordered table-hover">
+                    <div className="myaccount-orders">
+                      <h4 className="small-title">MY ORDERS</h4>
+                      <div className="table-responsive">
+                        <table className="table table-bordered table-hover">
                           <tbody>
                             <tr>
                               <th>ORDER</th>
@@ -125,7 +125,7 @@ function Dashboard() {
                             </tr>
                             <tr>
                               <td>
-                                <a class="account-order-id" href="/(0)">
+                                <a className="account-order-id" href="/(0)">
                                   #5364
                                 </a>
                               </td>
@@ -133,14 +133,14 @@ function Dashboard() {
                               <td>On Hold</td>
                               <td>£162.00 for 2 items</td>
                               <td>
-                                <a href="/(0)" class="kenne-btn kenne-btn_sm">
+                                <a href="/(0)" className="kenne-btn kenne-btn_sm">
                                   <span>View</span>
                                 </a>
                               </td>
                             </tr>
                             <tr>
                               <td>
-                                <a class="account-order-id" href="/(0)">
+                                <a className="account-order-id" href="/(0)">
                                   #5356
                                 </a>
                               </td>
@@ -148,7 +148,7 @@ function Dashboard() {
                               <td>On Hold</td>
                               <td>£162.00 for 2 items</td>
                               <td>
-                                <a href="/(0)" class="kenne-btn kenne-btn_sm">
+                                <a href="/(0)" className="kenne-btn kenne-btn_sm">
                                   <span>View</span>
                                 </a>
                               </td>
@@ -159,26 +159,26 @@ function Dashboard() {
                     </div>
                   </div>
                   <div
-                    class="tab-pane fade"
+                    className="tab-pane fade"
                     id="account-address"
                     role="tabpanel"
                     aria-labelledby="account-address-tab"
                   >
-                    <div class="myaccount-address">
+                    <div className="myaccount-address">
                       <p>
                         The following addresses will be used on the checkout
                         page by default.
                       </p>
-                      <div class="row">
-                        <div class="col">
-                          <h4 class="small-title">Billing Adress</h4>
+                      <div className="row">
+                        <div className="col">
+                          <h4 className="small-title">Billing Adress</h4>
                           <address>
                             1234 Heaven Stress, Beverly Hill OldYork UnitedState
                             of Lorem
                           </address>
                         </div>
-                        <div class="col">
-                          <h4 class="small-title">Shipping Address</h4>
+                        <div className="col">
+                          <h4 className="small-title">Shipping Address</h4>
                           <address>
                             1234 Heaven Stress, Beverly Hill OldYork UnitedState
                             of Lorem
@@ -188,31 +188,31 @@ function Dashboard() {
                     </div>
                   </div>
                   <div
-                    class="tab-pane fade"
+                    className="tab-pane fade"
                     id="account-details"
                     role="tabpanel"
                     aria-labelledby="account-details-tab"
                   >
-                    <div class="myaccount-details">
-                      <form action="#" class="kenne-form">
-                        <div class="kenne-form-inner">
-                          <div class="single-input single-input-half">
+                    <div className="myaccount-details">
+                      <form action="#" className="kenne-form">
+                        <div className="kenne-form-inner">
+                          <div className="single-input single-input-half">
                             <label for="account-details-firstname">
                               First Name*
                             </label>
                             <input type="text" id="account-details-firstname" />
                           </div>
-                          <div class="single-input single-input-half">
+                          <div className="single-input single-input-half">
                             <label for="account-details-lastname">
                               Last Name*
                             </label>
                             <input type="text" id="account-details-lastname" />
                           </div>
-                          <div class="single-input">
+                          <div className="single-input">
                             <label for="account-details-email">Email*</label>
                             <input type="email" id="account-details-email" />
                           </div>
-                          <div class="single-input">
+                          <div className="single-input">
                             <label for="account-details-oldpass">
                               Current Password(leave blank to leave unchanged)
                             </label>
@@ -221,7 +221,7 @@ function Dashboard() {
                               id="account-details-oldpass"
                             />
                           </div>
-                          <div class="single-input">
+                          <div className="single-input">
                             <label for="account-details-newpass">
                               New Password (leave blank to leave unchanged)
                             </label>
@@ -230,7 +230,7 @@ function Dashboard() {
                               id="account-details-newpass"
                             />
                           </div>
-                          <div class="single-input">
+                          <div className="single-input">
                             <label for="account-details-confpass">
                               Confirm New Password
                             </label>
@@ -239,9 +239,9 @@ function Dashboard() {
                               id="account-details-confpass"
                             />
                           </div>
-                          <div class="single-input">
+                          <div className="single-input">
                             <button
-                              class="kenne-btn kenne-btn_dark"
+                              className="kenne-btn kenne-btn_dark"
                               type="submit"
                             >
                               <span>SAVE CHANGES</span>
