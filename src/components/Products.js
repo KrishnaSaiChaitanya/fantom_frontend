@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { ADD, LIKE } from "../redux/actions/action";
+import { NavLink } from "react-router-dom";
 
 function Products() {
   const [view, setview] = useState("grid gridview-3");
@@ -21,6 +24,18 @@ function Products() {
       .catch((err) => {
         console.log(err);
       });
+  };
+
+  const dispatch = useDispatch();
+
+  const send = (p) => {
+    // console.log(p);
+    dispatch(ADD(p));
+  };
+
+  const like = (p) => {
+    // console.log(p);
+    dispatch(LIKE(p));
   };
 
   useEffect(() => {
@@ -51,153 +66,44 @@ function Products() {
   };
   return (
     <div>
-      <div class="kenne-content_wrapper">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-3 col-lg-4 order-2 order-lg-1 ">
-              <div class="kenne-sidebar-catagories_area">
-                <div class="kenne-sidebar_categories">
-                  <div class="kenne-categories_title first-child">
-                    <h5>Filter by price</h5>
-                  </div>
-                  <div class="price-filter">
-                    <div
-                      id="slider-range"
-                      class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                    >
-                      <div
-                        class="ui-slider-range ui-corner-all ui-widget-header"
-                        style={{ width: "72.5%", left: "0%" }}
-                      ></div>
-                      <span
-                        tabindex="0"
-                        class="ui-slider-handle ui-corner-all ui-state-default"
-                      ></span>
-                      <span
-                        tabindex="0"
-                        class="ui-slider-handle ui-corner-all ui-state-default"
-                      ></span>
-                    </div>
-                    <div class="price-slider-amount">
-                      <div class="label-input">
-                        <label>price : </label>
-                        <input
-                          type="text"
-                          id="amount"
-                          name="price"
-                          placeholder="Add Your Price"
-                        />
-                        <button class="filter-btn">Filter</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="kenne-sidebar_categories category-module">
-                  <div class="kenne-categories_title">
-                    <h5>Product Categories</h5>
-                  </div>
-                  <div class="sidebar-categories_menu">
-                    <ul>
-                      <li>
-                        <a href="javascript:void(0)">Mens</a>
-                      </li>
-                      <li>
-                        <a href="javascript:void(0)">Womens</a>
-                      </li>
-                      <li>
-                        <a href="javascript:void(0)">Shirts</a>
-                      </li>
-                      <li>
-                        <a href="javascript:void(0)">T shirts</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="kenne-sidebar_categories">
-                  <div class="kenne-categories_title">
-                    <h5>Color</h5>
-                  </div>
-                  <ul class="sidebar-checkbox_list">
-                    <li>
-                      <a href="javascript:void(0)">Black (1)</a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0)">Blue (1)</a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0)">Gold (3)</a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="kenne-sidebar_categories">
-                  <div class="kenne-categories_title kenne-tags_title">
-                    <h5>Product Tags</h5>
-                  </div>
-                  <ul class="kenne-tags_list">
-                    <li className="m-1">
-                      <a href="javascript:void(0)">Hoodie</a>
-                    </li>
-                    <li className="m-1">
-                      <a href="javascript:void(0)">Jacket</a>
-                    </li>
-                    <li className="m-1">
-                      <a href="javascript:void(0)">Frocks</a>
-                    </li>
-                    <li className="m-1">
-                      <a href="javascript:void(0)">Crochet</a>
-                    </li>
-                    <li className="m-1">
-                      <a href="javascript:void(0)">Scarf</a>
-                    </li>
-                    <li className="m-1">
-                      <a href="javascript:void(0)">Shirts</a>
-                    </li>
-                    <li className="m-1">
-                      <a href="javascript:void(0)">Men</a>
-                    </li>
-                    <li className="m-1">
-                      <a href="javascript:void(0)">Women</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-9 col-lg-8 order-1 order-lg-2">
-              <div class="shop-toolbar">
-                <div class="product-view-mode">
+      <div className="kenne-content_wrapper">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="shop-toolbar">
+                <div className="product-view-mode">
                   <a
-                    class="active grid-3"
+                    className="active grid-3"
                     data-target="gridview-3"
                     data-toggle="tooltip"
                     data-placement="top"
                     title="Grid View"
                     onClick={() => setview("grid gridview-3")}
                   >
-                    <i class="fa fa-th"></i>
+                    <i className="fa fa-th"></i>
                   </a>
                   <a
-                    class="list"
+                    className="list"
                     data-target="listview"
                     data-toggle="tooltip"
                     data-placement="top"
                     title="List View"
                     onClick={() => setview("listview")}
                   >
-                    <i class="fa fa-th-list"></i>
+                    <i className="fa fa-th-list"></i>
                   </a>
                 </div>
-                <div class="product-page_count">
+                <div className="product-page_count">
                   <p>
                     Showing {products.length === 0 ? 0 : firstIndex + 1}–
                     {lastIndex <= products.length ? lastIndex : products.length}{" "}
                     of {products.length} results
                   </p>
                 </div>
-                <div class="product-item-selection_area">
-                  <div class="product-short">
-                    <label class="select-label">Short By:</label>
-                    <select class="nice-select myniceselect">
+                <div className="product-item-selection_area">
+                  <div className="product-short">
+                    <label className="select-label">Short By:</label>
+                    <select className="nice-select myniceselect">
                       <option value="1">Default sorting</option>
                       <option value="2">Name, A to Z</option>
                       <option value="3">Name, Z to A</option>
@@ -211,30 +117,32 @@ function Products() {
                   </div>
                 </div>
               </div>
-              <div class={`shop-product-wrap row ${view}`}>
+              <div className={`shop-product-wrap row ${view}`}>
                 {records.length > 0 ? (
                   records.map((product, i) => (
-                    <div class="col-lg-4 col-md-4 col-sm-6" key={i}>
-                      <div class="product-item">
-                        <div class="single-product">
-                          <div class="product-img">
+                    <div className="col-lg-4 col-md-4 col-sm-6" key={i}>
+                      <div className="product-item">
+                        <div className="single-product">
+                          <div className="product-img">
                             <a href="single-product.html">
-                              <img
-                                class="primary-img"
-                                src={product.image}
-                                alt="product "
-                              />
-                              <img
-                                class="secondary-img"
-                                src={product.image2}
-                                alt="product "
-                              />
+                              <NavLink to={`/product/${product.id}`}>
+                                <img
+                                  className="primary-img"
+                                  src={product.image}
+                                  alt="product "
+                                />
+                                <img
+                                  className="secondary-img"
+                                  src={product.image2}
+                                  alt="product "
+                                />
+                              </NavLink>
                             </a>
-                            <span class="sticker">-15%</span>
-                            <div class="add-actions">
+                            <span className="sticker">-15%</span>
+                            <div className="add-actions">
                               <ul>
                                 <li
-                                  class="quick-view-btn"
+                                  className="quick-view-btn"
                                   data-bs-toggle="modal"
                                   data-bs-target="#exampleModalCenter"
                                 >
@@ -244,43 +152,45 @@ function Products() {
                                     data-placement="right"
                                     title="Quick View"
                                   >
-                                    <i class="ion-ios-search"></i>
+                                    <i className="ion-ios-search"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a
-                                    href="wishlist.html"
+                                    onClick={() => like(product)}
                                     data-bs-toggle="tooltip"
                                     data-placement="right"
                                     title="Add To Wishlist"
                                   >
-                                    <i class="ion-ios-heart-outline"></i>
+                                    <i className="ion-ios-heart-outline"></i>
                                   </a>
                                 </li>
 
                                 <li>
                                   <a
-                                    href="cart.html"
+                                    onClick={() => send(product)}
                                     data-bs-toggle="tooltip"
                                     data-placement="right"
                                     title="Add To cart"
                                   >
-                                    <i class="ion-bag"></i>
+                                    <i className="ion-bag"></i>
                                   </a>
                                 </li>
                               </ul>
                             </div>
                           </div>
-                          <div class="product-content">
-                            <div class="product-desc_info">
-                              <h3 class="product-name">
+                          <div className="product-content">
+                            <div className="product-desc_info">
+                              <h3 className="product-name">
                                 <a href="single-product.html">
                                   {product.title}
                                 </a>
                               </h3>
-                              <div class="price-box">
-                                <span class="new-price">₹{product.price}</span>
-                                <span class="old-price">
+                              <div className="price-box">
+                                <span className="new-price">
+                                  ₹{product.price}
+                                </span>
+                                <span className="old-price">
                                   ₹{product.actualprice}
                                 </span>
                               </div>
@@ -299,34 +209,36 @@ function Products() {
                           </div>
                         </div>
                       </div>
-                      <div class="list-product_item">
-                        <div class="single-product">
-                          <div class="product-img">
+                      <div className="list-product_item">
+                        <div className="single-product">
+                          <div className="product-img">
                             <a href="single-product.html">
                               <img src={product.image} alt="product " />
                             </a>
                           </div>
-                          <div class="product-content">
-                            <div class="product-desc_info">
-                              <div class="price-box">
-                                <span class="new-price">₹{product.price}</span>
-                                <span class="old-price">
+                          <div className="product-content">
+                            <div className="product-desc_info">
+                              <div className="price-box">
+                                <span className="new-price">
+                                  ₹{product.price}
+                                </span>
+                                <span className="old-price">
                                   ₹{product.actualprice}
                                 </span>
                               </div>
-                              <h6 class="product-name">
+                              <h6 className="product-name">
                                 <a href="single-product.html">
                                   {product.title}
                                 </a>
                               </h6>
-                              <div class="product-short_desc">
+                              <div className="product-short_desc">
                                 <p>{product.description}</p>
                               </div>
                             </div>
-                            <div class="add-actions">
+                            <div className="add-actions">
                               <ul>
                                 <li
-                                  class="quick-view-btn"
+                                  className="quick-view-btn"
                                   data-bs-toggle="modal"
                                   data-bs-target="#exampleModalCenter"
                                 >
@@ -336,7 +248,7 @@ function Products() {
                                     data-placement="top"
                                     title="Quick View"
                                   >
-                                    <i class="ion-ios-search"></i>
+                                    <i className="ion-ios-search"></i>
                                   </a>
                                 </li>
                                 <li>
@@ -346,7 +258,7 @@ function Products() {
                                     data-placement="top"
                                     title="Add To Wishlist"
                                   >
-                                    <i class="ion-ios-heart-outline"></i>
+                                    <i className="ion-ios-heart-outline"></i>
                                   </a>
                                 </li>
                                 <li>
@@ -356,7 +268,7 @@ function Products() {
                                     data-placement="top"
                                     title="Add To Compare"
                                   >
-                                    <i class="ion-ios-reload"></i>
+                                    <i className="ion-ios-reload"></i>
                                   </a>
                                 </li>
                                 <li>
@@ -366,7 +278,7 @@ function Products() {
                                     data-placement="top"
                                     title="Add To cart"
                                   >
-                                    <i class="ion-bag"></i>
+                                    <i className="ion-bag"></i>
                                   </a>
                                 </li>
                               </ul>
@@ -380,23 +292,25 @@ function Products() {
                   <div className="text-center">Loading...</div>
                 )}
               </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="kenne-paginatoin-area">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <ul class="kenne-pagination-box primary-color">
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="kenne-paginatoin-area">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <ul className="kenne-pagination-box primary-color">
                           <li>
                             <a className="Prev" href="#" onClick={prePage}>
                               Prev
                             </a>
                           </li>
-                          {/* <li class="active">
+                          {/* <li className="active">
                             <a href="#">1</a>
                           </li> */}
                           {numbers.map((n, i) => (
                             <li
-                              class={`${currentPage === n ? "active " : ""}`}
+                              className={`${
+                                currentPage === n ? "active " : ""
+                              }`}
                               key={i}
                             >
                               <a href="#" onClick={() => changeCPage(n)}>
