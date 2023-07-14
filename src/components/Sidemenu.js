@@ -25,7 +25,7 @@ export default function Sidebar() {
           <div className="flex" style={{ justifyContent: "flex-end" }}>
             <span
               id="boot-icon"
-              class="bi bi-x-lg"
+              className="bi bi-x-lg"
               onClick={() => menu.setshowSidebar(!menu.showSidebar)}
               style={{
                 fontSize: "20px",
@@ -40,83 +40,83 @@ export default function Sidebar() {
           <h2>Smartlauf</h2>
         </div>
       </div>
-      <div class="offcanvas-minicart_wrapper" id="miniCart">
-        <div class="offcanvas-menu-inner">
-          <a href="#" class="btn-close">
-            <i class="ion-android-close"></i>
+      <div className="offcanvas-minicart_wrapper" id="miniCart">
+        <div className="offcanvas-menu-inner">
+          <a href="#" className="btn-close">
+            <i className="ion-android-close"></i>
           </a>
-          <div class="minicart-content">
-            <div class="minicart-heading">
+          <div className="minicart-content">
+            <div className="minicart-heading">
               <h4>Shopping Cart</h4>
             </div>
-            <ul class="minicart-list">
-              <li class="minicart-product">
-                <a class="product-item_remove" href="/">
-                  <i class="ion-android-close"></i>
+            <ul className="minicart-list">
+              <li className="minicart-product">
+                <a className="product-item_remove" href="/">
+                  <i className="ion-android-close"></i>
                 </a>
-                <div class="product-item_img">
+                <div className="product-item_img">
                   <img
                     src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273744/3-1_nsgqfk.webp"
                     alt="Kenne's Product Image"
                     height={150}
                   />
                 </div>
-                <div class="product-item_content">
-                  <a class="product-item_title" href="shop-left-sidebar.html">
+                <div className="product-item_content">
+                  <a className="product-item_title" href="shop-left-sidebar.html">
                     Autem ipsa ad
                   </a>
-                  <span class="product-item_quantity">1 x $145.80</span>
+                  <span className="product-item_quantity">1 x $145.80</span>
                 </div>
               </li>
-              <li class="minicart-product">
-                <a class="product-item_remove" href="/">
-                  <i class="ion-android-close"></i>
+              <li className="minicart-product">
+                <a className="product-item_remove" href="/">
+                  <i className="ion-android-close"></i>
                 </a>
-                <div class="product-item_img">
+                <div className="product-item_img">
                   <img
                     src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273744/3-1_nsgqfk.webp"
                     alt="Kenne's Product Image"
                     height={150}
                   />
                 </div>
-                <div class="product-item_content">
-                  <a class="product-item_title" href="shop-left-sidebar.html">
+                <div className="product-item_content">
+                  <a className="product-item_title" href="shop-left-sidebar.html">
                     Tenetur illum amet
                   </a>
-                  <span class="product-item_quantity">1 x $150.80</span>
+                  <span className="product-item_quantity">1 x $150.80</span>
                 </div>
               </li>
-              <li class="minicart-product">
-                <a class="product-item_remove" href="/">
-                  <i class="ion-android-close"></i>
+              <li className="minicart-product">
+                <a className="product-item_remove" href="/">
+                  <i className="ion-android-close"></i>
                 </a>
-                <div class="product-item_img">
+                <div className="product-item_img">
                   <img
                     src="https://res.cloudinary.com/dsfems7vy/image/upload/v1688273744/3-1_nsgqfk.webp"
                     alt="Kenne's Product Image"
                     height={150}
                   />
                 </div>
-                <div class="product-item_content">
-                  <a class="product-item_title" href="shop-left-sidebar.html">
+                <div className="product-item_content">
+                  <a className="product-item_title" href="shop-left-sidebar.html">
                     Non doloremque placeat
                   </a>
-                  <span class="product-item_quantity">1 x $165.80</span>
+                  <span className="product-item_quantity">1 x $165.80</span>
                 </div>
               </li>
             </ul>
           </div>
-          <div class="minicart-item_total">
+          <div className="minicart-item_total">
             <span>Subtotal</span>
-            <span class="ammount">$462.4‬0</span>
+            <span className="ammount">$462.4‬0</span>
           </div>
-          <div class="minicart-btn_area">
-            <a href="cart.html" class="kenne-btn kenne-btn_fullwidth">
+          <div className="minicart-btn_area">
+            <a href="cart.html" className="kenne-btn kenne-btn_fullwidth">
               Minicart
             </a>
           </div>
-          <div class="minicart-btn_area">
-            <a href="checkout.html" class="kenne-btn kenne-btn_fullwidth">
+          <div className="minicart-btn_area">
+            <a href="checkout.html" className="kenne-btn kenne-btn_fullwidth">
               Checkout
             </a>
           </div>

@@ -11,6 +11,7 @@
       "size": "Medium",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "inStock": true,
+      "rating": 3.5,
       "quantity": 10
     },
     {
@@ -25,6 +26,7 @@
       "size": "Large",
       "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
       "inStock": true,
+      "rating": 3.5,
       "quantity": 5
     },
     {
@@ -38,6 +40,7 @@
       "size": "One Size",
       "description": "At vero eos et accusamus et iusto odio dignissimos ducimus.",
       "inStock": false,
+      "rating": 3.5,
       "quantity": 0
     },
     {
@@ -51,6 +54,7 @@
       "size": "Small",
       "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit.",
       "inStock": true,
+      "rating": 3.5,
       "quantity": 7
     },
     {
@@ -64,6 +68,7 @@
       "size": "Large",
       "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
       "inStock": true,
+      "rating": 3.5,
       "quantity": 3
     },
     {
@@ -77,6 +82,7 @@
       "size": "One Size",
       "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis.",
       "inStock": true,
+      "rating": 2.5,
       "quantity": 9
     },
     {
@@ -90,6 +96,7 @@
       "size": "Medium",
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
       "inStock": false,
+      "rating": 3.5,
       "quantity": 0
     },
     {
@@ -103,6 +110,7 @@
       "size": "Large",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "inStock": true,
+      "rating": 3.5,
       "quantity": 12
     },
     {
@@ -116,6 +124,7 @@
       "size": "Small",
       "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
       "inStock": true,
+      "rating": 3.5,
       "quantity": 15
     },
     {
@@ -129,6 +138,7 @@
       "size": "Medium",
       "description": "At vero eos et accusamus et iusto odio dignissimos ducimus.",
       "inStock": true,
+      "rating": 3.5,
       "quantity": 20
     }
   ]

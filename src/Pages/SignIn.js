@@ -16,37 +16,37 @@ function SignIn() {
     });
   return (
     <div>
-      <div class="kenne-login-register_area">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-xs-12 ">
+      <div className="kenne-login-register_area">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 col-xs-12 ">
               <form action="#">
-                <div class="login-form">
-                  <h4 class="login-title">Login</h4>
-                  <div class="row">
-                    <div class="col-md-12 col-12">
+                <div className="login-form">
+                  <h4 className="login-title">Login</h4>
+                  <div className="row">
+                    <div className="col-md-12 col-12">
                       <label>Email Address*</label>
                       <input type="email" placeholder="Email Address" />
                     </div>
-                    <div class="col-12 mb--20">
+                    <div className="col-12 mb--20">
                       <label>Password</label>
                       <input type="password" placeholder="Password" />
                     </div>
-                    <div class="col-md-8">
-                      <div class="check-box">
+                    <div className="col-md-8">
+                      <div className="check-box">
                         <input type="checkbox" id="remember_me" />
                         <label for="remember_me">Remember me</label>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="forgotton-password_info">
+                    <div className="col-md-4">
+                      <div className="forgotton-password_info">
                         <a href="#"> Forgotten pasward?</a>
                       </div>
                     </div>
-                    <div class="col-md-12">
+                    <div className="col-md-12">
                       <button
                         style={{ width: "100%" }}
-                        class="kenne-login_btn"
+                        className="kenne-login_btn"
                         onClick={() => notify()}
                       >
                         Login
@@ -57,7 +57,7 @@ function SignIn() {
                           style={{ width: "100%" }}
                           data-bs-target="#exampleModalToggle"
                           data-bs-toggle="modal"
-                          class="kenne-register_btn"
+                          className="kenne-register_btn"
                         >
                           Register
                         </button>
