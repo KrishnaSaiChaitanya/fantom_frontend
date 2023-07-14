@@ -20,6 +20,7 @@ import Product from "./components/Product";
 import Not_found from "./Pages/Not_found";
 import { ToastContainer } from "react-toastify";
 import Animation from "./components/Animation";
+import Account from "./Pages/Account";
 
 const Layout = () => {
   return (
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/wishlist",
         element: <WishList />,
+      },
+      {
+        path: "/account",
+        element: <Account />,
       },
       {
         path: "/about",

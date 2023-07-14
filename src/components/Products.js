@@ -54,7 +54,116 @@ function Products() {
       <div class="kenne-content_wrapper">
         <div class="container">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-xl-3 col-lg-4 order-2 order-lg-1 ">
+              <div class="kenne-sidebar-catagories_area">
+                <div class="kenne-sidebar_categories">
+                  <div class="kenne-categories_title first-child">
+                    <h5>Filter by price</h5>
+                  </div>
+                  <div class="price-filter">
+                    <div
+                      id="slider-range"
+                      class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                    >
+                      <div
+                        class="ui-slider-range ui-corner-all ui-widget-header"
+                        style={{ width: "72.5%", left: "0%" }}
+                      ></div>
+                      <span
+                        tabindex="0"
+                        class="ui-slider-handle ui-corner-all ui-state-default"
+                      ></span>
+                      <span
+                        tabindex="0"
+                        class="ui-slider-handle ui-corner-all ui-state-default"
+                      ></span>
+                    </div>
+                    <div class="price-slider-amount">
+                      <div class="label-input">
+                        <label>price : </label>
+                        <input
+                          type="text"
+                          id="amount"
+                          name="price"
+                          placeholder="Add Your Price"
+                        />
+                        <button class="filter-btn">Filter</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="kenne-sidebar_categories category-module">
+                  <div class="kenne-categories_title">
+                    <h5>Product Categories</h5>
+                  </div>
+                  <div class="sidebar-categories_menu">
+                    <ul>
+                      <li>
+                        <a href="javascript:void(0)">Mens</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Womens</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Shirts</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">T shirts</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="kenne-sidebar_categories">
+                  <div class="kenne-categories_title">
+                    <h5>Color</h5>
+                  </div>
+                  <ul class="sidebar-checkbox_list">
+                    <li>
+                      <a href="javascript:void(0)">Black (1)</a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">Blue (1)</a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">Gold (3)</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="kenne-sidebar_categories">
+                  <div class="kenne-categories_title kenne-tags_title">
+                    <h5>Product Tags</h5>
+                  </div>
+                  <ul class="kenne-tags_list">
+                    <li className="m-1">
+                      <a href="javascript:void(0)">Hoodie</a>
+                    </li>
+                    <li className="m-1">
+                      <a href="javascript:void(0)">Jacket</a>
+                    </li>
+                    <li className="m-1">
+                      <a href="javascript:void(0)">Frocks</a>
+                    </li>
+                    <li className="m-1">
+                      <a href="javascript:void(0)">Crochet</a>
+                    </li>
+                    <li className="m-1">
+                      <a href="javascript:void(0)">Scarf</a>
+                    </li>
+                    <li className="m-1">
+                      <a href="javascript:void(0)">Shirts</a>
+                    </li>
+                    <li className="m-1">
+                      <a href="javascript:void(0)">Men</a>
+                    </li>
+                    <li className="m-1">
+                      <a href="javascript:void(0)">Women</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-9 col-lg-8 order-1 order-lg-2">
               <div class="shop-toolbar">
                 <div class="product-view-mode">
                   <a

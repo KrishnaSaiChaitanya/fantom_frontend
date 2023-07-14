@@ -1604,8 +1604,9 @@ i,
   border-color: transparent transparent transparent #a8741a;
 }
 
-.template-color-1 .new-price {
+.new-price {
   color: #a8741a;
+  margin-right: 20px;
 }
 
 .template-color-1 .rating-box>ul>li {
@@ -1640,12 +1641,12 @@ i,
   color: #ffffff !important;
 }
 
-.template-color-1 .account-page-area .myaccount-tab-trigger li a.active {
+ .account-page-area .myaccount-tab-trigger li a.active {
   background: #a8741a;
   color: #ffffff;
 }
 
-.template-color-1 .account-page-area .myaccount-tab-trigger li a.active:hover {
+.account-page-area .myaccount-tab-trigger li a.active:hover {
   color: #ffffff !important;
 }
 
@@ -6519,11 +6520,19 @@ border: 2px solid white;
 
 .account-page-area .myaccount-tab-trigger li a {
   display: block;
-  background: #242424;
-  color: #ffffff;
+  background: #191919;
+  color: #ffffff !important;
   text-transform: uppercase;
   font-weight: 600;
   padding: 10px 20px;
+}
+.account-page-area .myaccount-tab-trigger li a  :hover{
+  display: block;
+  background: #5d5336;
+  /* color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 20px; */
 }
 
 .myaccount-tab-content {
