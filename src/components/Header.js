@@ -14,8 +14,7 @@ function Header() {
       const currentPosition = window.pageYOffset;
       setScrollPosition(currentPosition);
       setIsVisible(currentPosition > 220);
-      let quantity2=0;
-      
+      let quantity2 = 0;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -26,55 +25,54 @@ function Header() {
     };
   }, []);
 
-  const [products,setProducts]=useState([]);
-  const [total,setTotal]=useState(0);
-  const [quantity,setQuantity]=useState(0)
-  
-  const getData=()=>{
-    fetch('./Products.json'
-    ,{
-      headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
-    }
-    )
-      .then(function(response){
-        console.log(response)
+  const [products, setProducts] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [quantity, setQuantity] = useState(0);
+
+  const getData = () => {
+    fetch("./Products.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        console.log(response);
         return response.json();
       })
-      .then(function(myJson) {
+      .then(function (myJson) {
         console.log(myJson);
-        setProducts(myJson.products)
-      }).catch((err)=>{
-        console.log(err);
+        setProducts(myJson.products);
       })
-  }
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
-  useEffect(()=>{
-    getData()
-  },[])
+  useEffect(() => {
+    getData();
+  }, []);
 
   //whenever products details changes total changes
-  useEffect(()=>{
-    let total1=0;
-    let quantity1=0;
-    products.map((Product,key)=>{
-      total1+= Product.price * Product.quantity;
-      quantity1+=Product.quantity;
-      console.log(total1)
-    })
-    total1=total1.toFixed(2);
+  useEffect(() => {
+    let total1 = 0;
+    let quantity1 = 0;
+    products.map((Product, key) => {
+      total1 += Product.price * Product.quantity;
+      quantity1 += Product.quantity;
+      console.log(total1);
+    });
+    total1 = total1.toFixed(2);
     setTotal(total1);
     setQuantity(quantity1);
-  },[products])
+  }, [products]);
   let records;
-  if(products.length>3){
-     records=products.slice(0,3)
-  }else{
-     records= products;
+  if (products.length > 3) {
+    records = products.slice(0, 3);
+  } else {
+    records = products;
   }
-  
+
   return (
     <header class="main-header_area">
       <div class="header-top_area d-none d-lg-block">
@@ -266,23 +264,16 @@ function Header() {
                 <nav class="main-nav d-flex justify-content-center">
                   <ul>
                     <li class="dropdown-holder">
-                      <a href="/">Home</a>
-                      {/* <ul class="kenne-dropdown">
-                        <li>
-                          <a href="index.html">Home One</a>
-                        </li>
-                        <li>
-                          <a href="index-2.html">Home Two</a>
-                        </li>
-                        <li>
-                          <a href="index-3.html">Home Three</a>
-                        </li>
-                      </ul> */}
+                      <span className="px-2" style={{ fontSize: "16px" }}>
+                        <Link to={"/"}>Home</Link>
+                      </span>
                     </li>
                     <li class="megamenu-holder position-static">
-                      <a href="shop-left-sidebar.html">
-                        Shop <i class="ion-chevron-down"></i>
-                      </a>
+                      <span style={{ fontSize: "16px" }}>
+                        <Link to={"/products"}>
+                          Shop <i class="ion-chevron-down"></i>
+                        </Link>
+                      </span>
                       <ul class="kenne-megamenu">
                         <li>
                           <span class="megamenu-title">Shop Page Layout</span>
@@ -1076,53 +1067,47 @@ function Header() {
                   ></i>
                 </div>
                 <ul class="minicart-list p-3 justify-content-center">
-                  {products.length?
-                  
-                  records.map((Product,key)=>(
-                    (
-                      
-                      
-                      (
+                  {products.length ? (
+                    records.map((Product, key) => (
                       <li class="minicart-product d-flex flex-row" key={key}>
-                      <div class="product-item_img">
-                        <img
-                          src={Product.image}
-                          alt="Kenne's Product Image"
-                          style={{ maxWidth: "120px" }}
-                        />
-                      </div>
-                      <div
-                        class="product-item_content d-flex flex-column px-3"
-                        style={{ justifyContent: "center" }}
-                      >
-                        <a
-                          class="product-item_title"
-                          href="shop-left-sidebar.html"
+                        <div class="product-item_img">
+                          <img
+                            src={Product.image}
+                            alt="Kenne's Product Image"
+                            style={{ maxWidth: "120px" }}
+                          />
+                        </div>
+                        <div
+                          class="product-item_content d-flex flex-column px-3"
+                          style={{ justifyContent: "center" }}
                         >
-                         {Product.title}
+                          <a
+                            class="product-item_title"
+                            href="shop-left-sidebar.html"
+                          >
+                            {Product.title}
+                          </a>
+                          <span class="product-item_quantity">
+                            {Product.quantity} x ₹{Product.price}
+                          </span>
+                        </div>
+                        <a class="product-item_remove" href="/">
+                          <i class="ion-android-close"></i>
                         </a>
-                        <span class="product-item_quantity">{Product.quantity} x ₹{Product.price}</span>
-                      </div>
-                      <a class="product-item_remove" href="/">
-                        <i class="ion-android-close"></i>
-                      </a>
-                    </li>)
-                    )
-                  ))
-                  :(
+                      </li>
+                    ))
+                  ) : (
                     <li className="text-center">No items in your cart</li>
                   )}
-
-                  
                 </ul>
               </div>
-              {products.length?(
-              <div class="minicart-btn_area p-1">
-                <a href="/cart" class="kenne-btn kenne-btn_fullwidth">
-                  View More
-                </a>
-              </div>
-              ):(
+              {products.length ? (
+                <div class="minicart-btn_area p-1">
+                  <a href="/cart" class="kenne-btn kenne-btn_fullwidth">
+                    View More
+                  </a>
+                </div>
+              ) : (
                 <div></div>
               )}
               <div class="minicart-item_total d-flex flex-row justify-content-between p-2">
