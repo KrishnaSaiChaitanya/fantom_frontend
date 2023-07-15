@@ -16,7 +16,7 @@ function Header() {
     getData.map((ele, k) => {
       price = ele.price * ele.quantity + price;
     });
-    setPrice(price);
+    setPrice(price.toFixed(2));
   };
 
   useEffect(() => {
