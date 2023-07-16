@@ -55,8 +55,10 @@ function Checkout() {
     console.log(data);        //Billing details 
   };
    
-  const getData = useSelector((state) => state.cartreducer.carts);
-
+  const cartData = useSelector((state) => state.cartreducer.carts);
+  const getData = cartData?.filter(item => item.inStock) ?? [];
+  
+  
   const [price, setPrice] = useState(0);
   // console.log(price);
 
@@ -78,7 +80,7 @@ function Checkout() {
     <div>
       <Breadcrumb name={"Checkout"} />
       <div className="checkout-area">
-      {getData.length?(
+      {getData.length > 0 ? (
         <div className="container">
           <div className="row">
             <div className="col-lg-6 col-12">
