@@ -1,59 +1,90 @@
 import React,{useState,useEffect} from "react";
 import Breadcrumb from "../Pages/Breadcrumb";
+import { useDispatch, useSelector } from "react-redux";
+import { useForm } from "react-hook-form"
 
 function Checkout() {
+  
 
-  const [products,setProducts]=useState([]);
-  const getData=()=>{
-    fetch('./Products.json'
-    ,{
-      headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
-    }
-    )
-      .then(function(response){
-        console.log(response)
-        return response.json();
-      })
-      .then(function(myJson) {
-        console.log(myJson);
-        setProducts(myJson.products)
-      }).catch(
-        (err)=>{
-          console.log(err)
-        }
-      )
-  }
+  // const [products,setProducts]=useState([]);
+  // const getData=()=>{
+  //   fetch('./Products.json'
+  //   ,{
+  //     headers : { 
+  //       'Content-Type': 'application/json',
+  //       'Accept': 'application/json'
+  //      }
+  //   }
+  //   )
+  //     .then(function(response){
+  //       console.log(response)
+  //       return response.json();
+  //     })
+  //     .then(function(myJson) {
+  //       console.log(myJson);
+  //       setProducts(myJson.products)
+  //     }).catch(
+  //       (err)=>{
+  //         console.log(err)
+  //       }
+  //     )
+  // }
 
-  useEffect(()=>{
-    getData()
-  },[])
+  // useEffect(()=>{
+  //   getData()
+  // },[])
 
-  const [total,setTotal]=useState(0)
-  //whenever products details changes total changes
-  useEffect(()=>{
-    let total1=0;
+  // const [total,setTotal]=useState(0)
+  // //whenever products details changes total changes
+  // useEffect(()=>{
+  //   let total1=0;
     
-    products.map((Product,key)=>{
-      total1+= Product.price * Product.quantity;
-      console.log(total1)
-    })
-    total1=total1.toFixed(2);
-    setTotal(total1);
+  //   products.map((Product,key)=>{
+  //     total1+= Product.price * Product.quantity;
+  //     console.log(total1)
+  //   })
+  //   total1=total1.toFixed(2);
+  //   setTotal(total1);
     
-  },[products])
+  // },[products])
+
+
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);        //Billing details 
+  };
+   
+  const cartData = useSelector((state) => state.cartreducer.carts);
+  const getData = cartData?.filter(item => item.inStock) ?? [];
+  
+  
+  const [price, setPrice] = useState(0);
+  // console.log(price);
+
+
+
+  const total = () => {
+    let price = 0;
+    getData.map((ele, k) => {
+      price = ele.price * ele.quantity + price;
+    });
+    setPrice(price.toFixed(2));
+  };
+
+  useEffect(() => {
+    total();
+  }, [total]);
 
   return (
     <div>
       <Breadcrumb name={"Checkout"} />
       <div className="checkout-area">
-      {products.length?(
+      {getData.length > 0 ? (
         <div className="container">
           <div className="row">
             <div className="col-lg-6 col-12">
-              <form action="/">
+              <form onSubmit={handleSubmit(onSubmit)} action="/">
                 <div className="checkbox-form">
                   <h3>Billing Details</h3>
                   <div className="row">
@@ -62,7 +93,7 @@ function Checkout() {
                         <label>
                           Country <span className="required">*</span>
                         </label>
-                        <select className="myniceselect nice-select wide">
+                        <select className="myniceselect nice-select wide"  {...register("country")}>
                           <option data-display="Bangladesh">India</option>
                           <option value="uk">London</option>
                           <option value="rou">Romania</option>
@@ -77,7 +108,7 @@ function Checkout() {
                         <label>
                           First Name <span className="required">*</span>
                         </label>
-                        <input placeholder="" type="text" />
+                        <input placeholder="" type="text" {...register("firstName")} />
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -85,7 +116,7 @@ function Checkout() {
                         <label>
                           Last Name <span className="required">*</span>
                         </label>
-                        <input placeholder="" type="text" />
+                        <input placeholder="" type="text" {...register("lastName")} />
                       </div>
                     </div>
                     {/* <div className="col-md-12">
@@ -99,7 +130,7 @@ function Checkout() {
                         <label>
                           Address <span className="required">*</span>
                         </label>
-                        <input placeholder="Street address" type="text" />
+                        <input placeholder="Street address" type="text" {...register("address")}/>
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -115,15 +146,15 @@ function Checkout() {
                         <label>
                           Town / City <span className="required">*</span>
                         </label>
-                        <input type="text" />
+                        <input type="text" {...register("city")}/>
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="checkout-form-list">
                         <label>
-                          State / County <span className="required">*</span>
+                          State / Country <span className="required">*</span>
                         </label>
-                        <input placeholder="" type="text" />
+                        <input placeholder="" type="text" {...register("state")}/>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -131,7 +162,7 @@ function Checkout() {
                         <label>
                           Postcode / Zip <span className="required">*</span>
                         </label>
-                        <input placeholder="" type="text" />
+                        <input placeholder="" type="text" {...register("postCode")}/>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -139,7 +170,7 @@ function Checkout() {
                         <label>
                           Email Address <span className="required">*</span>
                         </label>
-                        <input placeholder="" type="email" />
+                        <input placeholder="" type="email" {...register("email")} />
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -147,7 +178,7 @@ function Checkout() {
                         <label>
                           Phone <span className="required">*</span>
                         </label>
-                        <input type="text" />
+                        <input type="text" {...register("phone")} />
                       </div>
                     </div>
                     {/* <div className="col-md-12">
@@ -307,7 +338,8 @@ function Checkout() {
                       </tr>
                     </thead>
                     <tbody>
-                      {products.map((product,key)=>(
+                      {getData.map((product)=>{
+                        return(
                         product.inStock&&(
                         <tr className="cart_item">
                         <td className="cart-product-name text-center">
@@ -318,21 +350,21 @@ function Checkout() {
                         <td className="cart-product-total text-center">
                           <span className="amount">₹{(product.quantity*product.price).toFixed(2)}</span>
                         </td>
-                      </tr>)
-                      ))}                      
+                      </tr>))
+                      })}                      
                     </tbody>
                     <tfoot>
                       <tr className="cart-subtotal">
                         <th>Cart Subtotal</th>
                         <td className="text-center">
-                          <span className="amount">₹{total}</span>
+                          <span className="amount">₹{price}</span>
                         </td>
                       </tr>
                       <tr className="order-total">
                         <th>Order Total</th>
                         <td className="text-center">
                           <strong>
-                            <span className="amount">₹{total}</span>
+                            <span className="amount">₹{price}</span>
                           </strong>
                         </td>
                       </tr>
@@ -434,7 +466,7 @@ function Checkout() {
                       </div>
                     </div>
                     <div className="order-button-payment">
-                      <input value="Place order" type="submit" />
+                      <input onClick={handleSubmit(onSubmit)} value="Place order" type="submit" />
                     </div>
                   </div>
                 </div>
@@ -450,5 +482,4 @@ function Checkout() {
     </div>
   );
 }
-
 export default Checkout;

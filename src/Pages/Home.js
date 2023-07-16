@@ -395,12 +395,12 @@ function Home() {
                       T-shirt's & More!
                     </h3>
                     <div className="kenne-btn-ps_center">
-                      <a
+                      <Link
                         className="kenne-btn transparent-btn black-color square-btn"
-                        href="/products"
+                        to="/products"
                       >
                         Discover Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -526,7 +526,6 @@ function Home() {
                               </li>
                               <li>
                                 <Link
-                                  to={"/wishlist"}
                                   onClick={()=>like(product)}
                                   data-bs-toggle="tooltip"
                                   data-placement="right"

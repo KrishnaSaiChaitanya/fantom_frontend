@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SignIn from "../Pages/SignIn";
 import SignUp from "../Pages/SignUp";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Product from "./Product";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,7 +9,7 @@ import { DLT } from "../redux/actions/action";
 
 function Header() {
   const [price, setPrice] = useState(0);
-  console.log(price);
+  // console.log(price);
 
   const total = () => {
     let price = 0;
@@ -1379,9 +1379,9 @@ function Header() {
                             {Product.quantity} x ₹{Product.price}
                           </span>
                         </div>
-                        <a className="product-item_remove" href="/">
+                        <Link className="product-item_remove" onClick={()=>dlt(Product.id)}>
                           <i className="ion-android-close"></i>
-                        </a>
+                        </Link>
                       </li>
                     ))
                   ) : (
@@ -1391,9 +1391,9 @@ function Header() {
               </div>
               {getData.length ? (
                 <div className="minicart-btn_area p-1">
-                  <a href="/cart" className="kenne-btn kenne-btn_fullwidth">
+                  <Link to="/cart" className="kenne-btn kenne-btn_fullwidth">
                     View More
-                  </a>
+                  </Link>
                 </div>
               ) : (
                 <div></div>
@@ -1403,14 +1403,18 @@ function Header() {
                 <span className="ammount">₹{price}</span>
               </div>
               <div className="minicart-btn_area p-1">
-                <a href="/cart" className="kenne-btn kenne-btn_fullwidth">
+              <NavLink to={"/cart"}>
+                <a  className="kenne-btn kenne-btn_fullwidth">
                   Minicart
                 </a>
+              </NavLink>
               </div>
               <div className="minicart-btn_area p-1">
-                <a href="/checkout" className="kenne-btn kenne-btn_fullwidth">
+              <NavLink to={"/checkout"}>
+                <a className="kenne-btn kenne-btn_fullwidth">
                   Checkout
                 </a>
+              </NavLink>
               </div>
             </div>
           </div>

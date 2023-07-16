@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Breadcrumb from "../Pages/Breadcrumb";
 import { useDispatch, useSelector } from "react-redux";
 import { ADD, DLT, REMOVE } from "../redux/actions/action";
+import { Link } from "react-router-dom";
 
 function Cart() {
   // const [products,setProducts]=useState([]);
@@ -67,7 +68,7 @@ function Cart() {
     getData.map((ele, k) => {
       price = ele.price * ele.quantity + price;
     });
-    setPrice(price);
+    setPrice(price.toFixed(2));
   };
 
   useEffect(() => {
@@ -213,12 +214,14 @@ function Cart() {
                             Total <span>₹{price}</span>
                           </li>
                         </ul>
+                        <Link to={"/checkout"}>
                         <input
                           className="button"
                           name="Proceed to checkout"
                           value="Proceed to checkout"
                           type="submit"
                         />
+                        </Link>
                         {/* <button>Proceed to checkout</button> */}
                       </div>
                     </div>
