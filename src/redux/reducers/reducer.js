@@ -3,6 +3,65 @@ const INIT_STATE = {
   wishlist: [],
 };
 
+
+
+// export const wishreducer = (state = INIT_STATE, action) => {
+//   switch (action.type) {
+    
+//     case "ADD_WISHLIST":
+//       const likes = state.wishlist.findIndex(
+//         (item) => item.id === action.payload.id
+//       );
+
+//       if (likes >= 0) {
+//         state.wishlist[likes].quantity += 1;
+//         return {
+//           ...state,
+//           wishlist: [...state.wishlist],
+//         };
+//       } else {
+//         const temp = { ...action.payload, quantity: 1 };
+//         return {
+//           ...state,
+//           wishlist: [...state.wishlist, temp],
+//         };
+//       }
+      
+//     case "RMV_WISHLIST":
+//       const dislike = state.wishlist.filter((el) => el.id !== action.payload);
+//       return {
+//         ...state,
+//         wishlist: dislike,
+//       };
+
+//     case "RMV_ONE":
+//       const ItemIndex_dec = state.wishlist.findIndex(
+//         (item) => item.id === action.payload.id
+//       );
+
+//       if (state.wishlist[ItemIndex_dec].quantity >= 1) {
+//         const dltiteams = (state.wishlist[ItemIndex_dec].quantity -= 1);
+//         console.log([...state.wishlist, dltiteams]);
+
+//         return {
+//           ...state,
+//           wishlist: [...state.wishlist],
+//         };
+//       } else if (state.wishlist[ItemIndex_dec].quantity === 1) {
+//         const data = state.wishlist.filter((el) => el.id !== action.payload);
+
+//         return {
+//           ...state,
+//           wishlist: data,
+//         };
+//       }
+
+//     default:
+//       return state;
+//   }
+// };
+
+
 export const cartreducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "ADD_CART":
@@ -30,7 +89,7 @@ export const cartreducer = (state = INIT_STATE, action) => {
       );
 
       if (likes >= 0) {
-        state.wishlist[ItemIndex].quantity += 1;
+        state.wishlist[likes].quantity += 1;
         return {
           ...state,
           wishlist: [...state.wishlist],

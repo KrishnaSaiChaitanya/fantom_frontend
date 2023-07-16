@@ -26,6 +26,8 @@ function Products() {
       });
   };
 
+  const [sortBy, setSortBy] = useState("1");
+
   const dispatch = useDispatch();
 
   const send = (p) => {
@@ -102,8 +104,9 @@ function Products() {
                 </div>
                 <div className="product-item-selection_area">
                   <div className="product-short">
-                    <label className="select-label">Short By:</label>
-                    <select className="nice-select myniceselect">
+                    <label className="select-label">Sort By:</label>
+                    <select className="nice-select myniceselect" value={sortBy} 
+                    onChange={(e) => setSortBy(e.target.value)}>
                       <option value="1">Default sorting</option>
                       <option value="2">Name, A to Z</option>
                       <option value="3">Name, Z to A</option>
@@ -119,7 +122,32 @@ function Products() {
               </div>
               <div className={`shop-product-wrap row ${view}`}>
                 {records.length > 0 ? (
-                  records.map((product, i) => (
+                  records
+                    .sort((a, b) => {
+                      switch (sortBy) {
+                        case "1":
+                          return a.id - b.id; // Default sorting by ID
+                        case "2":
+                          return a.title.localeCompare(b.title); // Sort by name, A to Z
+                        case "3":
+                          return b.title.localeCompare(a.title); // Sort by name, Z to A
+                        case "4":
+                          return a.price - b.price; // Sort by price, low to high
+                        case "5":
+                          return b.price - a.price; // Sort by price, high to low
+                        case "6":
+                          return b.rating - a.rating; // Sort by rating, highest first
+                        case "7":
+                          return a.rating - b.rating; // Sort by rating, lowest first
+                        case "8":
+                          return a.model.localeCompare(b.model); // Sort by model, A to Z
+                        case "9":
+                          return b.model.localeCompare(a.model); // Sort by model, Z to A
+                        default:
+                          return a.id - b.id; // Default sorting by ID
+                      }
+                    })
+                    .map((product, i) => (
                     <div className="col-lg-4 col-md-4 col-sm-6" key={i}>
                       <div className="product-item">
                         <div className="single-product">
