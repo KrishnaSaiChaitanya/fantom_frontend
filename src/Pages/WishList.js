@@ -44,6 +44,29 @@ function WishList() {
   const dlt = (id) => {
     dispatch( DISLIKE(id));
   }
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const recordsPerPage = 3;
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex - recordsPerPage;
+  const records = getData.slice(firstIndex, lastIndex);
+  const npage = Math.ceil(getData.length / recordsPerPage);
+  const numbers = [...Array(npage + 1).keys()].slice(1);
+
+  const prePage = () => {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const changeCPage = (id) => {
+    setCurrentPage(id);
+  };
+  const nextPage = () => {
+    if (currentPage !== npage) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
   return (
     <div>
       <Breadcrumb name={"Wishlist"} />
@@ -67,7 +90,7 @@ function WishList() {
                       </tr>
                     </thead>
                     <tbody>
-                  { getData.map((product)=>{
+                  { records.map((product)=>{
                     return(<>
                       <tr >
                         <td className="kenne-product_remove">
@@ -116,12 +139,53 @@ function WishList() {
                   </table>
                 </div>
               </form>):(
-                    <div className="text-center fs-3">Add Items to your wishlist</div>
+                    <div className="text-center fs-4">
+                    <img src="../images/empty_data.jpg" className="empty_data_img"/>
+                    <p>Add Items to your wishlist</p>
+                    </div>
                   )
                 }
             </div>
           </div>
         </div>
+        { getData.length&&
+        <div className="row">
+                <div className="col-lg-12">
+                  <div className="kenne-paginatoin-area">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <ul className="kenne-pagination-box primary-color">
+                          <li>
+                            <a className="Prev" href="#" onClick={prePage}>
+                              Prev
+                            </a>
+                          </li>
+                          {/* <li className="active">
+                            <a href="#">1</a>
+                          </li> */}
+                          {numbers.map((n, i) => (
+                            <li
+                              className={`${
+                                currentPage === n ? "active " : ""
+                              }`}
+                              key={i}
+                            >
+                              <a href="#" onClick={() => changeCPage(n)}>
+                                {n}
+                              </a>
+                            </li>
+                          ))}
+                          <li>
+                            <a className="Next" href="#" onClick={nextPage}>
+                              Next
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>}
       </div>
     </div>
   );

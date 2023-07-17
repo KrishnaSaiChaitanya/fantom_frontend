@@ -1385,7 +1385,10 @@ function Header() {
                       </li>
                     ))
                   ) : (
-                    <li className="text-center">No items in your cart</li>
+                    <li className="text-center fs-4">
+                        <img src="../images/empty_data.jpg" className="empty_data_img"/>
+                        <p>No items in your cart</p>
+                    </li>
                   )}
                 </ul>
               </div>

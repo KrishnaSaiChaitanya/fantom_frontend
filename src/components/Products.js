@@ -44,6 +44,30 @@ function Products() {
     getData();
   }, []);
 
+  //Function for Rating 
+  const renderStarRating = (rating) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(<i className="ion-ios-star" key={i}></i>);
+    }
+
+    if (hasHalfStar) {
+      stars.push(<i className="ion-ios-star-half" key={fullStars}></i>);
+    }
+
+    const emptyStars = 5 - Math.ceil(rating);
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(
+        <i className="ion-ios-star-outline" key={fullStars + i + 1}></i>
+      );
+    }
+
+    return <ul className="rating-box">{stars}</ul>;
+  };
+
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 9;
   const lastIndex = currentPage * recordsPerPage;
@@ -53,7 +77,7 @@ function Products() {
   const numbers = [...Array(npage + 1).keys()].slice(1);
 
   const prePage = () => {
-    if (currentPage !== firstIndex) {
+    if (currentPage !== 1) {
       setCurrentPage(currentPage - 1);
     }
   };
@@ -62,7 +86,7 @@ function Products() {
     setCurrentPage(id);
   };
   const nextPage = () => {
-    if (currentPage !== lastIndex) {
+    if (currentPage !== npage) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -199,6 +223,7 @@ function Products() {
                                     onClick={() => send(product)}
                                     data-bs-toggle="tooltip"
                                     data-placement="right"
+                                    href="/cart"
                                     title="Add To cart"
                                   >
                                     <i className="ion-bag"></i>
@@ -232,6 +257,9 @@ function Products() {
                                     Out of Stock
                                   </h6>
                                 )}
+                              <div className="rating-box">
+                                {renderStarRating(product.rating)}
+                              </div>
                               </div>
                             </div>
                           </div>
@@ -301,7 +329,7 @@ function Products() {
                                 </li>
                                 <li>
                                   <a
-                                    href="cart.html"
+                                    href="/cart"
                                     data-bs-toggle="tooltip"
                                     data-placement="top"
                                     title="Add To cart"
@@ -320,6 +348,7 @@ function Products() {
                   <div className="text-center">Loading...</div>
                 )}
               </div>
+              {products.length&&
               <div className="row">
                 <div className="col-lg-12">
                   <div className="kenne-paginatoin-area">
@@ -357,6 +386,7 @@ function Products() {
                   </div>
                 </div>
               </div>
+              }
             </div>
           </div>
         </div>

@@ -401,13 +401,17 @@
 
 
 import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { DLT,ADD,REMOVE } from '../redux/actions/action'
+import { DLT,ADD,REMOVE,LIKE } from '../redux/actions/action'
 import products from "./ProductsData";
+import {Swiper,SwiperSlide} from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import { toast } from "react-toastify";
+import { NavLink } from "react-router-dom";
 
 
 function Product() {
@@ -419,6 +423,16 @@ function Product() {
 
   const dispatch = useDispatch();
 
+  const [added,setAdded] = useState(false)
+
+  const id1=Number(id);
+  const id2= Number(id)+3;
+  let N = products.length;
+  let records=[]
+  for(let i=0;i<3;i++){
+    records.push(products[(id1+i)%N]);
+  }
+  console.log(records);
   // const getData = useSelector((state) => state.cartreducer.carts);
 
   const compare = () => {
@@ -426,7 +440,8 @@ function Product() {
       return e.id == id;
     });
     setData(comparedata);
-  };
+    
+  }
 
   const send = (e) => {
     // console.log(e);
@@ -442,6 +457,21 @@ function Product() {
     dispatch(REMOVE(item));
   };
 
+  const like = (e) => {
+    if(added){
+      toast.info(`${e.title} already added to wishlist`,
+      {
+        toastClassName: 'custom-toast', 
+      })
+    }else{
+      toast.success(`${e.title} added to wishlist`,
+      {
+        toastClassName: 'custom-toast', 
+      })
+      dispatch(LIKE(e))
+      setAdded(true)
+    }
+  };
 
   useEffect(()=>{
     compare();
@@ -461,19 +491,44 @@ function Product() {
     fade: true,
     arrows: true,
   };
+
+
+  //Function for Rating 
+  const renderStarRating = (rating) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(<i className="ion-ios-star" key={i}></i>);
+    }
+
+    if (hasHalfStar) {
+      stars.push(<i className="ion-ios-star-half" key={fullStars}></i>);
+    }
+
+    const emptyStars = 5 - Math.ceil(rating);
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(
+        <i className="ion-ios-star-outline" key={fullStars + i + 1}></i>
+      );
+    }
+
+    return <ul className="rating-box">{stars}</ul>;
+  };
   return (
     <div>
             <div className="sp-area">
               <div className="container">
                 <div className="sp-nav">
-                  {data.map((ele) => {
+                  {data.map((ele,key) => {
                     return (                    
-                  <div className="row">
+                  <div className="row" key={key}>
                     <div className="col-lg-6 px-4 pt-1 mb-3 justify-content-center">
                       <div className="sp-img_area">
                       
                         <div className="m-3">
-                          <Slider className="p-3" {...settings}>
+                          {/* <Slider className="p-3" {...settings}>
                             <div className="single-slide">
                               <img
                                 src={ele.image}
@@ -487,31 +542,28 @@ function Product() {
                                 alt="Kenne's Product Image"
                               />
                             </div>
-                            <div className="single-slide">
+                            
+                          </Slider> */}
+                          <Swiper cssMode={true}
+                              navigation={true}
+                              mousewheel={true}
+                              keyboard={true}
+                              modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                              pagination={{
+                                  dynamicBullets: true,
+                              }}>
+                            <SwiperSlide><img
+                                src={ele.image}
+                                alt="Kenne's Product Image"
+                                // style={{ maxWidth: "200px" }}
+                              /></SwiperSlide>
+                            <SwiperSlide>
                               <img
-                                src="../images/shirt-1.webp"
+                                src={ele.image2}
                                 alt="Kenne's Product Image"
                               />
-                            </div>
-                            <div className="single-slide">
-                              <img
-                                src="../images/shirt-1.webp"
-                                alt="Kenne's Product Image"
-                              />
-                            </div>
-                            <div className="single-slide">
-                              <img
-                                src="../images/shirt-1.webp"
-                                alt="Kenne's Product Image"
-                              />
-                            </div>
-                            <div className="single-slide">
-                              <img
-                                src="../images/shirt-1.webp"
-                                alt="Kenne's Product Image"
-                              />
-                            </div>
-                          </Slider>
+                            </SwiperSlide>
+                          </Swiper>
                         </div>
                         {/* <div
                     className="sp-img_slider-nav slick-slider-nav kenne-element-carousel arrow-style-2 arrow-style-3"
@@ -572,12 +624,16 @@ function Product() {
                     <div className="col-lg-6 d-flex justify-content-center align-items-center">
                       <div className="sp-content">
                         <div className="sp-heading">
-                          <h5>
+                          <h3>
                             <a href="#">{ele.title}</a>
-                          </h5>
+                          </h3>
                         </div>
+                        <div>
+                          <h4 className="sp-description">{ele.description}</h4>
+                        </div>
+                       
                         {/* <span className="reference">Reference: demo_1</span> */}
-                        <div className="rating-box">
+                        {/* <div className="rating-box">
                           <ul>
                             <li>
                               <i className="ion-android-star"></i>
@@ -595,7 +651,7 @@ function Product() {
                               <i className="ion-android-star"></i>
                             </li>
                           </ul>
-                        </div>
+                        </div> */}
                         <div className="sp-essential_stuff">
                           <ul>
                             {/* <li>
@@ -608,19 +664,27 @@ function Product() {
                             {/* <li>
                         Reward Points: <a href="javascript:void(0)">100</a>
                       </li> */}
+                            
                             <li>
                               Availability:{" "}
-                              <a href="javascript:void(0)">In Stock</a>
-                            </li>
-                            <li>
-                              EX Tax:₹
                               <a href="javascript:void(0)">
-                                <span>{ele.price}</span>
+                                <b>
+                                {ele.quantity?"In Stock"
+                                            :"Out of Stock"}
+                                </b>
                               </a>
                             </li>
                             <li>
-                              Price in reward points:{" "}
-                              <a href="javascript:void(0)">400</a>
+                              Price:
+                              <a href="javascript:void(0)">
+                                <b>₹{ele.price}</b>
+                              </a>
+                            </li>
+                            <li>
+                              Actual Price: 
+                              <span className="sp-essential_stuff-actual-price">
+                              ₹{ele.actualprice}
+                              </span>
                             </li>
                           </ul>
                         </div>
@@ -686,8 +750,8 @@ function Product() {
                           <div className="cart-plus-minus">
                             <input
                               className="cart-plus-minus-box"
-                              value="1"
-                              type="text"
+                              value={ele.quantity}
+                              type="number"
                             />
                             <div className="dec qtybutton">
                               <i className="fa fa-angle-down"></i>
@@ -700,20 +764,29 @@ function Product() {
                         <div className="qty-btn_area">
                           <ul>
                             <li>
+                              {ele.quantity?
                               <Link onClick={() => send(ele)}
                                  className="qty-cart_btn" to="/cart">
                                 Add To Cart
                               </Link>
+                              :<Link onClick={()=>{javascript:void(0)}}
+                                className="qty-cart_btn" to='/wishlist'>
+                                  Notify Me
+                              </Link>}
                             </li>
                             <li>
+                              <Link onClick={()=>{like(ele)
+                              }}>                             
                               <a
                                 className="qty-wishlist_btn"
-                                href="wishlist.html"
+                                href="/wishlist"
                                 data-bs-toggle="tooltip"
                                 title="Add To Wishlist"
+                                
                               >
                                 <i className="ion-android-favorite-outline"></i>
                               </a>
+                              </Link>
                             </li>
                             <li>
                               <a
@@ -733,7 +806,7 @@ function Product() {
                           <a href="javascript:void(0)">jacket</a>,
                           <a href="javascript:void(0)">shirt</a>
                         </div>
-                        <div className="kenne-social_link">
+                        {/* <div className="kenne-social_link">
                           <ul>
                             <li className="facebook">
                               <a
@@ -786,7 +859,7 @@ function Product() {
                               </a>
                             </li>
                           </ul>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -794,7 +867,127 @@ function Product() {
                   })}
                 </div>
               </div>
+          </div>
+          <div className="product-area mb-4">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="section-title">
+                  <h3>Similar Products</h3>
+                  <div className="product-arrow"></div>
+                </div>
+              </div>
+              <div className="col-lg-12 container">
+                <div className="row">
+                  {records.map((product) => (
+                    <div
+                      className="product-item col-lg-4 col-md-4"
+                      key={product.id}
+                    >
+                      <div className="single-product">
+                        <div className="product-img">
+                          <NavLink to={`/product/${product.id}`}>
+                            <img
+                              className="primary-img"
+                              src={product.image}
+                              alt="Product"
+                              style={{ maxWidth: "100%" }}
+                            />
+                            <img
+                              className="secondary-img"
+                              src={product.image2}
+                              alt="Product"
+                              style={{ maxWidth: "100%" }}
+                            />
+                          </NavLink>
+                          <span className="sticker-2">Hot</span>
+                          <div className="add-actions">
+                            <ul>
+                              <li
+                                className="quick-view-btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModalCenter"
+                              >
+                                <a
+                                  href="javascript:void(0)"
+                                  data-bs-toggle="tooltip"
+                                  data-placement="right"
+                                  title="Quick View"
+                                >
+                                  <i className="ion-ios-search"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <Link
+                                  to={"/wishlist"}
+                                  onClick={()=>like(product)}
+                                  data-bs-toggle="tooltip"
+                                  data-placement="right"
+                                  title="Add To Wishlist"
+                                >
+                                  <i className="ion-ios-heart-outline"></i>
+                                </Link>
+                              </li>
+                              <li>
+                                <a
+                                  href="compare.html"
+                                  data-bs-toggle="tooltip"
+                                  data-placement="right"
+                                  title="Add To Compare"
+                                >
+                                  <i className="ion-ios-reload"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <Link
+                                  onClick={()=>send(product)}
+                                  data-bs-toggle="tooltip"
+                                  data-placement="right"
+                                  title="Add To cart"
+                                >
+                                  <i className="ion-bag"></i>
+                                </Link>
+                              </li>
+                            </ul>
+                          </div>
+                        <div className="product-content">
+                          <div className="product-desc_info">
+                            <h3 className="product-name">
+                              <a href="single-product.html">{product.title}</a>
+                            </h3>
+                            <div className="price-box">
+                              <span className="new-price">
+                                ₹{product.price}
+                              </span>
+                              <span className="old-price">
+                                ₹{product.actualprice}
+                              </span>
+                            </div>
+                            <div className="mt-1">
+                                {product.quantity > 0 ? (
+                                  <h6 className="text-success text-center">
+                                    In Stock
+                                  </h6>
+                                ) : (
+                                  <h6 className="text-danger text-center">
+                                    Out of Stock
+                                  </h6>
+                                )}
+                            </div>
+                            <div className="rating-box">
+                            {renderStarRating(product.rating)}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                        </div>
+                  ))}
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
     </div>
   );
 }

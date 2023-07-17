@@ -21,6 +21,7 @@ import Not_found from "./Pages/Not_found";
 import { ToastContainer } from "react-toastify";
 import Animation from "./components/Animation";
 import Account from "./Pages/Account";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Layout = () => {
   return (
@@ -86,6 +87,18 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="app">
+      <ToastContainer
+    position="bottom-center"
+    autoClose={4000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    theme="light"
+    />
       <RouterProvider router={router} />
     </div>
   );

@@ -1,7 +1,40 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import Breadcrumb from "./Breadcrumb";
+import Orders from './OrderData'
 
 function Account() {
+
+  const [orders,setOrders] = useState([]);
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const recordsPerPage = 3;
+    const lastIndex = currentPage * recordsPerPage;
+    const firstIndex = lastIndex - recordsPerPage;
+    const records = orders.slice(firstIndex, lastIndex);
+    console.log(records)
+    const npage = Math.ceil(orders.length / recordsPerPage);
+    const numbers = [...Array(npage + 1).keys()].slice(1);
+
+    const prePage = () => {
+      if (currentPage !== 1) {
+        setCurrentPage(currentPage - 1);
+      }
+    };
+
+    const changeCPage = (id) => {
+      setCurrentPage(id);
+    };
+    const nextPage = () => {
+      if (currentPage !== npage) {
+        setCurrentPage(currentPage + 1);
+      }
+    };
+
+    useEffect(()=>{
+      setOrders(Orders)
+      console.log(orders);
+    },[Orders])
+
   return (
     <div>
       <Breadcrumb name={"My Account"} />
@@ -113,9 +146,11 @@ function Account() {
                 >
                   <div class="myaccount-orders">
                     <h4 class="small-title">MY ORDERS</h4>
+                    <hr/>
+                      {orders.length?(
                     <div class="table-responsive">
                       <table class="table table-bordered table-hover">
-                        <tbody>
+                        <thead>
                           <tr>
                             <th>ORDER</th>
                             <th>DATE</th>
@@ -123,18 +158,22 @@ function Account() {
                             <th>TOTAL</th>
                             <th></th>
                           </tr>
-                          <tr>
+                          </thead>
+                          <tbody>
+                      {orders.length&&records.map((order,key)=>{
+                        return(
+                          <tr key={key}>
                             <td>
                               <a
                                 class="account-order-id"
                                 href="javascript:void(0)"
                               >
-                                #5364
+                                #{order.id}
                               </a>
                             </td>
-                            <td>Mar 27, 2019</td>
-                            <td>On Hold</td>
-                            <td>£162.00 for 2 items</td>
+                            <td>{order.date}</td>
+                            <td>{order.status}</td>
+                            <td>₹{order.total} for {order.quantity} items</td>
                             <td>
                               <a
                                 href="javascript:void(0)"
@@ -144,30 +183,54 @@ function Account() {
                               </a>
                             </td>
                           </tr>
-                          <tr>
-                            <td>
-                              <a
-                                class="account-order-id"
-                                href="javascript:void(0)"
-                              >
-                                #5356
-                              </a>
-                            </td>
-                            <td>Mar 27, 2019</td>
-                            <td>On Hold</td>
-                            <td>£162.00 for 2 items</td>
-                            <td>
-                              <a
-                                href="javascript:void(0)"
-                                class="kenne-btn kenne-btn_sm"
-                              >
-                                <span>View</span>
-                              </a>
-                            </td>
-                          </tr>
+                        )
+                          })}
                         </tbody>
                       </table>
+                      { orders.length&&
+                <div className="row mb-4">
+                  <div className="col-lg-12">
+                    <div className="kenne-paginatoin-area">
+                      <div className="row">
+                        <div className="col-lg-12">
+                          <ul className="kenne-pagination-box primary-color">
+                            <li>
+                              <a className="Prev" href="#" onClick={prePage}>
+                                Prev
+                              </a>
+                            </li>
+                            {/* <li className="active">
+                              <a href="#">1</a>
+                            </li> */}
+                            {numbers.map((n, i) => (
+                              <li
+                                className={`${
+                                  currentPage === n ? "active " : ""
+                                }`}
+                                key={i}
+                              >
+                                <a href="#" onClick={() => changeCPage(n)}>
+                                  {n}
+                                </a>
+                              </li>
+                            ))}
+                            <li>
+                              <a className="Next" href="#" onClick={nextPage}>
+                                Next
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                </div>}
+                    </div>
+                      ):
+                      (<div className="text-center fs-4">
+                        <img src="../images/empty_data.jpg" className="empty_data_img"/>
+                        <p>No orders yet</p>
+                        </div>)}
                   </div>
                 </div>
                 <div
