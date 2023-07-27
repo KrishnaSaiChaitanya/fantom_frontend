@@ -178,7 +178,7 @@ function Header() {
           <div className="row">
             <div className="col-lg-12">
               <div className="header-middle_nav row">
-                <div className="col-4"></div>
+                {/* <div className="col-4"></div> */}
                 <div className="header-logo_area col-4 d-flex justify-content-center">
                   <Link to={"/"}>
                     <img
