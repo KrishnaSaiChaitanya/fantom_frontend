@@ -25,7 +25,7 @@ const ImageOnScroll = () => {
     <div className="heroImgDiv">
       <img
         src="/images/HeroImg.webp"
-        alt="Image"
+        alt="mainImage"
         style={{ transform: `scale(${scale}) translateY(-100px)` }}
       />
       <div className="scroll">SCROLL DOWN</div>

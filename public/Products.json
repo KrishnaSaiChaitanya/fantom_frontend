@@ -3,8 +3,8 @@
     {
       "id": "001",
       "title": "Product 1",
-      "image": "../images/shirt-1.webp",
-      "image2":"../images/shirt-2.webp",
+      "image": "../images/hmgoepprodPrimary.jpeg",
+      "image2":"../images/hmgoepprodSecondary.jpeg",
       "price": 19.99,
       "actualprice": 24.99,
       "category": "Electronics",
@@ -17,8 +17,8 @@
     {
       "id": "002",
       "title": "Product 2",
-      "image": "../images/shirt-1.webp",
-      "image2":"../images/shirt-2.webp",
+      "image": "../images/hmgoepprod02Primary.jpeg",
+      "image2":"../images/hmgoepprod02Secondary.jpeg",
       
       "price": 9.99,
       "actualprice": 14.99,
@@ -32,8 +32,8 @@
     {
       "id": "003",
       "title": "Product 3",
-      "image": "../images/shirt-1.webp",
-      "image2":"../images/shirt-2.webp",
+      "image": "../images/hmgoepprod03Primary.jpeg",
+      "image2":"../images/hmgoepprod03s.jpeg",
       "price": 49.99,
       "actualprice": 59.99,
       "category": "Home & Kitchen",
@@ -46,8 +46,8 @@
     {
       "id": "004",
       "title": "Product 4",
-      "image": "../images/shirt-1.webp",
-      "image2":"../images/shirt-2.webp",
+      "image": "../images/hmgoepprod02Primary.jpeg",
+      "image2":"../images/hmgoepprod02Secondary.jpeg",
       "price": 29.99,
       "actualprice": 34.99,
       "category": "Beauty",
@@ -60,8 +60,8 @@
     {
       "id": "005",
       "title": "Product 5",
-      "image": "../images/shirt-1.webp",
-      "image2":"../images/shirt-2.webp",
+      "image": "../images/hmgoepprod03Primary.jpeg",
+      "image2":"../images/hmgoepprod03s.jpeg",
       "price": 14.99,
       "actualprice": 19.99,
       "category": "Sports",
@@ -74,8 +74,8 @@
     {
       "id": "006",
       "title": "Product 6",
-      "image": "../images/shirt-1.webp",
-      "image2":"../images/shirt-2.webp",
+      "image": "../images/hmgoepprodPrimary.jpeg",
+      "image2":"../images/hmgoepprodSecondary.jpeg",
       "price": 39.99,
       "actualprice": 44.99,
       "category": "Toys",
@@ -88,8 +88,8 @@
     {
       "id": "007",
       "title": "Product 7",
-      "image": "../images/shirt-1.webp",
-      "image2":"../images/shirt-2.webp",
+      "image": "../images/hmgoepprod02Primary.jpeg",
+      "image2":"../images/hmgoepprod02Secondary.jpeg",
       "price": 24.99,
       "actualprice": 29.99,
       "category": "Books",
@@ -102,8 +102,8 @@
     {
       "id": "008",
       "title": "Product 8",
-      "image": "../images/shirt-1.webp",
-      "image2":"../images/shirt-2.webp",
+      "image": "../images/hmgoepprod03Primary.jpeg",
+      "image2":"../images/hmgoepprod03s.jpeg",
       "price": 79.99,
       "actualprice": 89.99,
       "category": "Electronics",

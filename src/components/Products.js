@@ -257,9 +257,9 @@ function Products() {
                                     Out of Stock
                                   </h6>
                                 )}
-                              <div className="rating-box">
+                              {/* <div className="rating-box">
                                 {renderStarRating(product.rating)}
-                              </div>
+                              </div> */}
                               </div>
                             </div>
                           </div>
@@ -391,7 +391,6 @@ function Products() {
           </div>
         </div>
       </div>
-      {/* <!-- Kenne's Content Wrapper Area End Here --> */}
     </div>
   );
 }

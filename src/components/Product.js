@@ -891,13 +891,13 @@ function Product() {
                               className="primary-img"
                               src={product.image}
                               alt="Product"
-                              style={{ maxWidth: "100%" }}
+                              // style={{ maxWidth: "100%" }}
                             />
                             <img
                               className="secondary-img"
                               src={product.image2}
                               alt="Product"
-                              style={{ maxWidth: "100%" }}
+                              // style={{ maxWidth: "100%" }}
                             />
                           </NavLink>
                           <span className="sticker-2">Hot</span>
@@ -974,9 +974,9 @@ function Product() {
                                   </h6>
                                 )}
                             </div>
-                            <div className="rating-box">
+                            {/* <div className="rating-box">
                             {renderStarRating(product.rating)}
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                       </div>
