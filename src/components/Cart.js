@@ -68,7 +68,7 @@ function Cart() {
     getData.map((ele, k) => {
       price = ele.price * ele.quantity + price;
     });
-    setPrice(price.toFixed(2));
+    setPrice(price);
   };
 
   useEffect(() => {

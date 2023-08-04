@@ -167,7 +167,7 @@ function Home() {
                 <div className="row">
                   {products.slice(0, 8).map((product) => (
                     <div
-                      className="product-item col-lg-3 col-md-4"
+                      className="product-item col-lg-3 col-md-4 product-item_home"
                       key={product.id}
                     >
                       <div className="single-product">

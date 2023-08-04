@@ -3260,7 +3260,7 @@ border: 2px solid white;
     gap: 50px;
   }
   .product-item{
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -5947,7 +5947,7 @@ border: 2px solid white;
     -moz-flex: 0 0 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 50%;
   }
 }
 

@@ -44,7 +44,7 @@
   background-size: contain;
 }
 
-.veiwAllbtn{
+.veiwAllbtn {
   background: black;
   width: 200px;
   padding: 10px 60px;
@@ -55,11 +55,17 @@
   text-transform: uppercase;
 }
 
-.veiwAllbtn a{
+.veiwAllbtn a {
   color: white !important;
 }
 
-.service-item svg{
+.service-item svg {
   margin-block: 1rem;
   transform: scale(2);
+}
+
+@media (max-width: 600px) {
+  .product-item_home {
+    width: 50% !important;
+  }
 }

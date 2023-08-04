@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { ADD, LIKE } from "../redux/actions/action";
 import { NavLink } from "react-router-dom";
+import '../styles/productsStyles.css';
 
 function Products() {
   const [view, setview] = useState("grid gridview-3");
@@ -279,7 +280,7 @@ function Products() {
                                   ₹{product.price}
                                 </span>
                                 <span className="old-price">
-                                  ₹{product.actualprice}
+                                 <s>₹{product.actualprice}</s> 
                                 </span>
                               </div>
                               <h6 className="product-name">
